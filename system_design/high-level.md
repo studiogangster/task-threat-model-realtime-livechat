@@ -1,3 +1,5 @@
+# 
+
 # High-Level Architecture: Sprinklr Live Chat (Trust Boundaries & Isolation)
 
 This diagram provides a high-level view of the main isolated components and trust boundaries in the Sprinklr Live Chat system, focusing on the relationships between the End User, Client, and Sprinklr SaaS.
@@ -343,3 +345,84 @@ flowchart TD
   - Secure session tokens
 - **Open Questions:**
   - How is session expiration handled?
+
+---
+
+## 4. S2S LLM Callback to Client Backend
+
+### 4.1 High-Level Diagram
+
+**Description:**  
+Shows the flow when the LLM service, upon receiving a user query, makes a server-to-server (S2S) API call to the client backend to fetch personalized data.
+
+```mermaid
+flowchart TD
+  ENDUSER["End User"]
+  LIVECHAT["Sprinklr Live Chat Service"]
+  LLM["LLM Context Service"]
+  CLIENTBACKEND["Client Backend Service"]
+
+  ENDUSER -- "Query" --> LIVECHAT
+  LIVECHAT -- "Query" --> LLM
+  LLM -- "S2S API Call" --> CLIENTBACKEND
+  CLIENTBACKEND -- "Personalized Data" --> LLM
+  LLM -- "LLM Response" --> LIVECHAT
+  LIVECHAT -- "Chat Response" --> ENDUSER
+```
+
+---
+
+### 4.2 LLM Context Service (S2S Callback Component)
+
+**Description:**  
+Handles outbound S2S API calls to client backend for personalized data retrieval.
+
+```mermaid
+flowchart TD
+  LLM["LLM Context Service"]
+  S2S["S2S API Handler"]
+  CLIENTBACKEND["Client Backend Service"]
+  LLM --> S2S
+  S2S -- "API Call" --> CLIENTBACKEND
+  CLIENTBACKEND -- "Data" --> S2S
+  S2S --> LLM
+```
+
+**Threat Model Template:**
+- **Threats:**
+  - Unauthorized S2S access
+  - Data leakage
+  - Replay or injection attacks
+- **Mitigations:**
+  - Mutual TLS or signed tokens
+  - Strict data validation
+  - Rate limiting and logging
+- **Open Questions:**
+  - How is S2S authentication managed?
+
+---
+
+### 4.3 Client Backend Service (S2S Endpoint Component)
+
+**Description:**  
+Receives S2S API calls from Sprinklr LLM service and returns personalized data.
+
+```mermaid
+flowchart TD
+  S2S["S2S API Endpoint"]
+  DATASTORE["Personalized Data Store"]
+  S2S --> DATASTORE
+  DATASTORE --> S2S
+```
+
+**Threat Model Template:**
+- **Threats:**
+  - Unauthorized data access
+  - Excessive data exposure
+  - Abuse of S2S endpoint
+- **Mitigations:**
+  - Strong authentication/authorization
+  - Data minimization
+  - Monitoring and alerting
+- **Open Questions:**
+  - What data is exposed via S2S, and how is access scoped?
