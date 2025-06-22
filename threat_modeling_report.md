@@ -283,6 +283,16 @@ Each entry includes:
   - Unvalidated message injection (XSS/DoS)  
   - Requires input validation, rate limiting, and session hardening  
 
+**High-Level Data Flow Diagram:**
+```mermaid
+flowchart TD
+  EU["End User (Untrusted / Internet)"]
+  SDK["Client Web/Mobile App (SDK)"]
+  SLC["Sprinklr Live Chat (SaaS)"]
+
+  EU -- "Chat/Message" --> SDK
+  SDK -- "API/WebSocket" --> SLC
+```
 ---
 
 ### 🔸 TB-02: Client Admin → Sprinklr Dashboard
@@ -297,6 +307,14 @@ Each entry includes:
   - Enforce MFA, logging, and role-based access  
   - Prompt Injection
 
+**High-Level Data Flow Diagram:**
+```mermaid
+flowchart TD
+  CAU["Client Admin User (Privileged)"]
+  SD["Sprinklr Dashboard (Admin UI, SaaS)"]
+
+  CAU -- "Secure Login / Configuration / Management" --> SD
+```
 ---
 
 ### 🔸 TB-03: Sprinklr LLM → Client API / MCP Server
@@ -310,6 +328,19 @@ Each entry includes:
   - Data leakage or poisoning  
   - Requires signed callbacks, MTLS, IP allowlist  
 
+**High-Level Data Flow Diagram (with Trust Boundary):**
+```mermaid
+flowchart TD
+  subgraph Sprinklr_SaaS ["Sprinklr SaaS (Trust Boundary)"]
+    LLM["Sprinklr LLM Context Service"]
+  end
+  subgraph Client_Org ["Client Organization (Outside Trust Boundary)"]
+    CB["Client Backend API / MCP Server"]
+  end
+
+  LLM -. "S2S Callback (MTLS/Signed)" .-> CB
+```
+*Note: The "subgraph" boxes represent trust boundaries. The dashed arrow (`-.->`) visually indicates a data flow crossing the trust boundary, similar to a dotted line in traditional threat model diagrams. Mermaid does not support arbitrary dotted boxes, but this approach is widely used for trust boundary visualization in Mermaid diagrams.*
 ---
 
 ### 🔸 TB-04: LLM → External Plugin / Tooling
@@ -639,6 +670,7 @@ flowchart TD
 - TLS
 - Session authentication
 - Tenant isolation
+- Hidden CAPTCHA and bot detection to prevent automated abuse and bot-driven DoS
 - Support for short-lived tokens and, if feasible, real-time token revocation or session invalidation
 - Enforce only one active live chat session per end user
 
@@ -811,8 +843,8 @@ The following table maps each major component to the STRIDE threat categories, i
 | Sprinklr Live Chat Service      | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | TLS, session auth, tenant isolation, logging, quotas |
 | LLM Context Service             | ✔ | ✔ |   | ✔ | ✔ | ✔ | Upload validation, output monitoring, least privilege, S2S auth |
 | Sprinklr Dashboard & Integration| ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | Secure coding, strong auth, audit logs, input validation |
-| S2S LLM Callback to Client      | ✔ | ✔ |   | ✔ | ✔ |   | Mutual TLS, strict validation, rate limiting, signed callbacks |
-| SDK Delivery & Supply Chain     | ✔ | ✔ |   | ✔ | ✔ |   | Signed SDK, SRI, CORS, CSP, dependency audits, domain whitelisting |
+| S2S LLM Callback to Client      | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | Mutual TLS, strict validation, rate limiting, signed callbacks |
+| SDK Delivery & Supply Chain     | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | Signed SDK, SRI, CORS, CSP, dependency audits, domain whitelisting |
 
 Legend:  
 S = Spoofing, T = Tampering, R = Repudiation, I = Information Disclosure, D = Denial of Service, E = Elevation of Privilege
