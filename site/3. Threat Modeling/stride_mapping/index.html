@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://sprinklr-threat-model.meddler.io/integration/troubleshooting/">
+        <link rel="canonical" href="https://sprinklr-threat-model.meddler.io/3.%20Threat%20Modeling/stride_mapping/">
       
       
-        <link rel="prev" href="../mobile_integration/">
+        <link rel="prev" href="../component_threat_analysis/">
       
       
-        <link rel="next" href="../../1.%20System%20Design/system_design/">
+        <link rel="next" href="../data_compliance/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Troubleshooting & FAQ - Sprinklr Live Chat SDK</title>
+        <title>STRIDE Threat Mapping - Sprinklr Live Chat SDK</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#troubleshooting-faq" class="md-skip">
+        <a href="#stride-threat-mapping" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Troubleshooting & FAQ
+              STRIDE Threat Mapping
             
           </span>
         </div>
@@ -215,20 +215,20 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -244,7 +244,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             SDK Integration
@@ -258,7 +258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+      <a href="../../integration/overview/" class="md-nav__link">
         
   
   
@@ -281,7 +281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sdk_usage/" class="md-nav__link">
+      <a href="../../integration/sdk_usage/" class="md-nav__link">
         
   
   
@@ -304,7 +304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web_integration/" class="md-nav__link">
+      <a href="../../integration/web_integration/" class="md-nav__link">
         
   
   
@@ -327,7 +327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mobile_integration/" class="md-nav__link">
+      <a href="../../integration/mobile_integration/" class="md-nav__link">
         
   
   
@@ -347,32 +347,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Troubleshooting & FAQ
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../integration/troubleshooting/" class="md-nav__link">
         
   
   
@@ -383,104 +361,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#common-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Issues
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Common Issues">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-sdk-fails-to-connect" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. SDK Fails to Connect
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-authentication-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Authentication Errors
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-messages-not-received" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Messages Not Received
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-ui-not-updating" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. UI Not Updating
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-cors-or-https-errors-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. CORS or HTTPS Errors (Web)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#debugging-tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      Debugging Tips
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
-    <span class="md-ellipsis">
-      Support
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -659,20 +539,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -688,7 +568,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Threat Modeling
@@ -702,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.%20Threat%20Modeling/threat_modeling_overview/" class="md-nav__link">
+      <a href="../threat_modeling_overview/" class="md-nav__link">
         
   
   
@@ -791,20 +671,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
         
           
           <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -820,7 +700,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
             Application Architecture Review
@@ -834,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.%20Threat%20Modeling/component_threat_analysis/" class="md-nav__link">
+      <a href="../component_threat_analysis/" class="md-nav__link">
         
   
   
@@ -854,10 +734,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../3.%20Threat%20Modeling/stride_mapping/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    STRIDE Threat Mapping
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -868,6 +770,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stride-summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      STRIDE Summary Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-stride-threat-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detailed STRIDE Threat Mapping
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detailed STRIDE Threat Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partner-web-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partner Web App
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprinklr-live-chat-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprinklr Live Chat Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llm-context-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Context Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprinklr-dashboard-integration-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprinklr Dashboard &amp; Integration Backend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s2s-llm-callback-to-partner-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      S2S LLM Callback to Partner Backend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sdk-delivery-supply-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      SDK Delivery &amp; Supply Chain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -880,7 +880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.%20Threat%20Modeling/data_compliance/" class="md-nav__link">
+      <a href="../data_compliance/" class="md-nav__link">
         
   
   
@@ -903,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.%20Threat%20Modeling/availability_recovery/" class="md-nav__link">
+      <a href="../availability_recovery/" class="md-nav__link">
         
   
   
@@ -1329,55 +1329,73 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#common-issues" class="md-nav__link">
+  <a href="#stride-summary-table" class="md-nav__link">
     <span class="md-ellipsis">
-      Common Issues
+      STRIDE Summary Table
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Common Issues">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-stride-threat-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detailed STRIDE Threat Mapping
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detailed STRIDE Threat Mapping">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-sdk-fails-to-connect" class="md-nav__link">
+  <a href="#partner-web-app" class="md-nav__link">
     <span class="md-ellipsis">
-      1. SDK Fails to Connect
+      Partner Web App
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-authentication-errors" class="md-nav__link">
+  <a href="#sprinklr-live-chat-service" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Authentication Errors
+      Sprinklr Live Chat Service
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-messages-not-received" class="md-nav__link">
+  <a href="#llm-context-service" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Messages Not Received
+      LLM Context Service
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-ui-not-updating" class="md-nav__link">
+  <a href="#sprinklr-dashboard-integration-backend" class="md-nav__link">
     <span class="md-ellipsis">
-      4. UI Not Updating
+      Sprinklr Dashboard &amp; Integration Backend
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-cors-or-https-errors-web" class="md-nav__link">
+  <a href="#s2s-llm-callback-to-partner-backend" class="md-nav__link">
     <span class="md-ellipsis">
-      5. CORS or HTTPS Errors (Web)
+      S2S LLM Callback to Partner Backend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sdk-delivery-supply-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      SDK Delivery &amp; Supply Chain
     </span>
   </a>
   
@@ -1385,24 +1403,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#debugging-tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      Debugging Tips
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
-    <span class="md-ellipsis">
-      Support
-    </span>
-  </a>
   
 </li>
       
@@ -1422,46 +1422,367 @@
 
 
 
-<h1 id="troubleshooting-faq">Troubleshooting &amp; FAQ</h1>
-<p>This section provides solutions to common issues encountered during the integration of the Sprinklr Live Chat SDK, as well as frequently asked questions.</p>
-<h2 id="common-issues">Common Issues</h2>
-<h3 id="1-sdk-fails-to-connect">1. SDK Fails to Connect</h3>
-<ul>
-<li><strong>Check network connectivity and firewall settings.</strong></li>
-<li><strong>Verify orgId and apiKey are correct.</strong></li>
-<li><strong>Ensure the environment (production/staging) is set properly.</strong></li>
-<li><strong>Check for typos in initialization code.</strong></li>
-</ul>
-<h3 id="2-authentication-errors">2. Authentication Errors</h3>
-<ul>
-<li><strong>Ensure the session token is valid and not expired.</strong></li>
-<li><strong>Confirm the backend is issuing tokens correctly.</strong></li>
-<li><strong>Check time synchronization between client and server.</strong></li>
-</ul>
-<h3 id="3-messages-not-received">3. Messages Not Received</h3>
-<ul>
-<li><strong>Verify the chat is connected before sending/receiving messages.</strong></li>
-<li><strong>Check event handler registration (onMessage, on).</strong></li>
-<li><strong>Inspect browser or device console/logs for errors.</strong></li>
-</ul>
-<h3 id="4-ui-not-updating">4. UI Not Updating</h3>
-<ul>
-<li><strong>Ensure your chat UI is listening for SDK events.</strong></li>
-<li><strong>Debug with sample data to isolate UI issues from SDK issues.</strong></li>
-</ul>
-<h3 id="5-cors-or-https-errors-web">5. CORS or HTTPS Errors (Web)</h3>
-<ul>
-<li><strong>Use HTTPS for all endpoints.</strong></li>
-<li><strong>Check CORS headers on your backend and Sprinklr endpoints.</strong></li>
-</ul>
-<h2 id="debugging-tips">Debugging Tips</h2>
-<ul>
-<li>Enable verbose logging in the SDK if available.</li>
-<li>Use browser dev tools or mobile device logs to inspect network requests.</li>
-<li>Test with sample credentials and a minimal app to isolate issues.</li>
-</ul>
-<h2 id="support">Support</h2>
-<p>If issues persist, contact Sprinklr support with logs, error messages, and integration details.</p>
+<h1 id="stride-threat-mapping">STRIDE Threat Mapping</h1>
+<p>This section maps each major component and data flow in the Sprinklr Live Chat system to the STRIDE threat categories, summarizing key threats and mitigations.</p>
+<hr />
+<h2 id="stride-summary-table">STRIDE Summary Table</h2>
+<table>
+<thead>
+<tr>
+<th>Component / Flow</th>
+<th>S</th>
+<th>T</th>
+<th>R</th>
+<th>I</th>
+<th>D</th>
+<th>E</th>
+<th>Key Mitigations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>End User Devices</td>
+<td>✔</td>
+<td>✔</td>
+<td></td>
+<td>✔</td>
+<td>✔</td>
+<td></td>
+<td>Secure tokens, HTTPS, user education, session validation</td>
+</tr>
+<tr>
+<td>Partner Web App</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>CSP, input validation, SDK integrity, RBAC, audit logs, SRI, CORS, domain whitelisting</td>
+</tr>
+<tr>
+<td>Partner Admin Users</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>MFA, RBAC, audit logs, secure login, session management</td>
+</tr>
+<tr>
+<td>Sprinklr Live Chat Service</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>TLS, session auth, tenant isolation, logging, quotas</td>
+</tr>
+<tr>
+<td>LLM Context Service</td>
+<td>✔</td>
+<td>✔</td>
+<td></td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>Upload validation, output monitoring, least privilege, S2S auth</td>
+</tr>
+<tr>
+<td>Sprinklr Dashboard &amp; Integration</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>Secure coding, strong auth, audit logs, input validation</td>
+</tr>
+<tr>
+<td>S2S LLM Callback to Partner</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>Mutual TLS, strict validation, rate limiting, signed callbacks</td>
+</tr>
+<tr>
+<td>SDK Delivery &amp; Supply Chain</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>Signed SDK, SRI, CORS, CSP, dependency audits, domain whitelisting</td>
+</tr>
+</tbody>
+</table>
+<p>Legend:<br />
+S = Spoofing, T = Tampering, R = Repudiation, I = Information Disclosure, D = Denial of Service, E = Elevation of Privilege</p>
+<hr />
+<h2 id="detailed-stride-threat-mapping">Detailed STRIDE Threat Mapping</h2>
+<h3 id="partner-web-app">Partner Web App</h3>
+<table>
+<thead>
+<tr>
+<th>STRIDE Category</th>
+<th>Threats</th>
+<th>Mitigations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spoofing</td>
+<td>Session hijacking, fake login pages, token theft</td>
+<td>Secure login, HTTPS, session validation, anti-phishing measures</td>
+</tr>
+<tr>
+<td>Tampering</td>
+<td>Malicious script injection, DOM manipulation, SDK tampering</td>
+<td>CSP, input validation, SRI, signed SDK, dependency audits</td>
+</tr>
+<tr>
+<td>Repudiation</td>
+<td>Users denying actions (e.g., chat sent, config changed)</td>
+<td>Audit logs, non-repudiation tokens, user action tracking</td>
+</tr>
+<tr>
+<td>Information Disclosure</td>
+<td>XSS, leaking chat data, API key exposure, improper CORS</td>
+<td>Output encoding, CORS/CSP hardening, access controls, encryption</td>
+</tr>
+<tr>
+<td>Denial of Service</td>
+<td>Resource exhaustion, browser DoS, SDK abuse</td>
+<td>Rate limiting, input validation, quotas, SDK throttling</td>
+</tr>
+<tr>
+<td>Elevation of Privilege</td>
+<td>Privilege escalation via vulnerable SDK or misconfig</td>
+<td>RBAC, least privilege, secure SDK delivery, config validation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="sprinklr-live-chat-service">Sprinklr Live Chat Service</h3>
+<table>
+<thead>
+<tr>
+<th>STRIDE Category</th>
+<th>Threats</th>
+<th>Mitigations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spoofing</td>
+<td>Forged session tokens, impersonation of users/partners</td>
+<td>Strong token validation, mTLS, session management</td>
+</tr>
+<tr>
+<td>Tampering</td>
+<td>Message alteration, unauthorized config changes</td>
+<td>Input validation, config integrity checks, audit logs</td>
+</tr>
+<tr>
+<td>Repudiation</td>
+<td>Users/partners denying chat actions or config changes</td>
+<td>Audit logs, signed actions, trace IDs</td>
+</tr>
+<tr>
+<td>Information Disclosure</td>
+<td>Cross-tenant data leakage, log exposure, improper access</td>
+<td>Tenant isolation, access controls, encrypted logs</td>
+</tr>
+<tr>
+<td>Denial of Service</td>
+<td>Flooding chat service, resource exhaustion</td>
+<td>Rate limiting, quotas, auto-scaling, DoS protection</td>
+</tr>
+<tr>
+<td>Elevation of Privilege</td>
+<td>Service misconfig, privilege escalation via API</td>
+<td>RBAC, least privilege, config validation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="llm-context-service">LLM Context Service</h3>
+<table>
+<thead>
+<tr>
+<th>STRIDE Category</th>
+<th>Threats</th>
+<th>Mitigations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spoofing</td>
+<td>Forged S2S calls, fake partner backends</td>
+<td>mTLS, signed requests, allowlists</td>
+</tr>
+<tr>
+<td>Tampering</td>
+<td>Malicious uploads, prompt injection, data poisoning</td>
+<td>Upload validation, prompt sanitization, input checks</td>
+</tr>
+<tr>
+<td>Repudiation</td>
+<td>Denial of LLM actions or S2S calls</td>
+<td>Audit logs, signed requests, traceability</td>
+</tr>
+<tr>
+<td>Information Disclosure</td>
+<td>LLM leaking sensitive data, improper callback data</td>
+<td>Output filtering, data minimization, access controls</td>
+</tr>
+<tr>
+<td>Denial of Service</td>
+<td>Malicious uploads, LLM abuse, callback flooding</td>
+<td>Rate limiting, input validation, quotas</td>
+</tr>
+<tr>
+<td>Elevation of Privilege</td>
+<td>LLM agentic flows invoking unauthorized actions</td>
+<td>Function whitelisting, least privilege, config review</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="sprinklr-dashboard-integration-backend">Sprinklr Dashboard &amp; Integration Backend</h3>
+<table>
+<thead>
+<tr>
+<th>STRIDE Category</th>
+<th>Threats</th>
+<th>Mitigations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spoofing</td>
+<td>Admin impersonation, session hijacking</td>
+<td>MFA, secure login, session validation</td>
+</tr>
+<tr>
+<td>Tampering</td>
+<td>Unauthorized config changes, API key manipulation</td>
+<td>Audit logs, config integrity, access controls</td>
+</tr>
+<tr>
+<td>Repudiation</td>
+<td>Denial of admin actions, config changes</td>
+<td>Audit logs, signed actions, traceability</td>
+</tr>
+<tr>
+<td>Information Disclosure</td>
+<td>API key leakage, config data exposure</td>
+<td>Access controls, encryption, audit logs</td>
+</tr>
+<tr>
+<td>Denial of Service</td>
+<td>Flooding dashboard APIs, resource exhaustion</td>
+<td>Rate limiting, quotas, monitoring</td>
+</tr>
+<tr>
+<td>Elevation of Privilege</td>
+<td>Privilege escalation via dashboard bugs</td>
+<td>RBAC, least privilege, secure coding</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="s2s-llm-callback-to-partner-backend">S2S LLM Callback to Partner Backend</h3>
+<table>
+<thead>
+<tr>
+<th>STRIDE Category</th>
+<th>Threats</th>
+<th>Mitigations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spoofing</td>
+<td>Fake Sprinklr calls to partner backend</td>
+<td>mTLS, signed requests, allowlists</td>
+</tr>
+<tr>
+<td>Tampering</td>
+<td>Callback data alteration, replay attacks</td>
+<td>Nonces, input validation, signed requests</td>
+</tr>
+<tr>
+<td>Repudiation</td>
+<td>Denial of callback actions</td>
+<td>Audit logs, signed requests, traceability</td>
+</tr>
+<tr>
+<td>Information Disclosure</td>
+<td>Sensitive data leakage in callback</td>
+<td>Data minimization, access controls, encrypted transport</td>
+</tr>
+<tr>
+<td>Denial of Service</td>
+<td>Callback flooding, resource exhaustion</td>
+<td>Rate limiting, quotas, monitoring</td>
+</tr>
+<tr>
+<td>Elevation of Privilege</td>
+<td>Callback invoking unauthorized partner actions</td>
+<td>Function whitelisting, least privilege, config review</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="sdk-delivery-supply-chain">SDK Delivery &amp; Supply Chain</h3>
+<table>
+<thead>
+<tr>
+<th>STRIDE Category</th>
+<th>Threats</th>
+<th>Mitigations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spoofing</td>
+<td>Fake SDK delivery, MITM attacks</td>
+<td>HTTPS-only, signed SDK, SRI, domain whitelisting</td>
+</tr>
+<tr>
+<td>Tampering</td>
+<td>Malicious SDK modification, dependency compromise</td>
+<td>Signed SDK, SRI, dependency audits, version pinning</td>
+</tr>
+<tr>
+<td>Repudiation</td>
+<td>Denial of SDK delivery or update actions</td>
+<td>Audit logs, signed delivery, traceability</td>
+</tr>
+<tr>
+<td>Information Disclosure</td>
+<td>SDK leaking data, dependency exfiltration</td>
+<td>Output filtering, access controls, dependency review</td>
+</tr>
+<tr>
+<td>Denial of Service</td>
+<td>SDK delivery disruption, dependency DoS</td>
+<td>CDN redundancy, monitoring, fallback versions</td>
+</tr>
+<tr>
+<td>Elevation of Privilege</td>
+<td>SDK or dependency privilege escalation</td>
+<td>Least privilege, secure coding, dependency review</td>
+</tr>
+</tbody>
+</table>
 
 
 

@@ -53,6 +53,26 @@
          <lastmod>2025-06-23</lastmod>
     </url>
     <url>
+         <loc>https://sprinklr-threat-model.meddler.io/3.%20Threat%20Modeling/availability_recovery/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://sprinklr-threat-model.meddler.io/3.%20Threat%20Modeling/component_threat_analysis/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://sprinklr-threat-model.meddler.io/3.%20Threat%20Modeling/data_compliance/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://sprinklr-threat-model.meddler.io/3.%20Threat%20Modeling/stride_mapping/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
+         <loc>https://sprinklr-threat-model.meddler.io/3.%20Threat%20Modeling/threat_modeling_overview/</loc>
+         <lastmod>2025-06-23</lastmod>
+    </url>
+    <url>
          <loc>https://sprinklr-threat-model.meddler.io/integration/mobile_integration/</loc>
          <lastmod>2025-06-23</lastmod>
     </url>

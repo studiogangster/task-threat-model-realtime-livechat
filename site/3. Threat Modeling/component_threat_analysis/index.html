@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://sprinklr-threat-model.meddler.io/integration/troubleshooting/">
+        <link rel="canonical" href="https://sprinklr-threat-model.meddler.io/3.%20Threat%20Modeling/component_threat_analysis/">
       
       
-        <link rel="prev" href="../mobile_integration/">
+        <link rel="prev" href="../../2.%20Secure%20Architecture/cloud_architecture/">
       
       
-        <link rel="next" href="../../1.%20System%20Design/system_design/">
+        <link rel="next" href="../stride_mapping/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Troubleshooting & FAQ - Sprinklr Live Chat SDK</title>
+        <title>Component-Level Threat Analysis - Sprinklr Live Chat SDK</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#troubleshooting-faq" class="md-skip">
+        <a href="#component-level-threat-analysis" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Troubleshooting & FAQ
+              Component-Level Threat Analysis
             
           </span>
         </div>
@@ -215,20 +215,20 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -244,7 +244,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             SDK Integration
@@ -258,7 +258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+      <a href="../../integration/overview/" class="md-nav__link">
         
   
   
@@ -281,7 +281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sdk_usage/" class="md-nav__link">
+      <a href="../../integration/sdk_usage/" class="md-nav__link">
         
   
   
@@ -304,7 +304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web_integration/" class="md-nav__link">
+      <a href="../../integration/web_integration/" class="md-nav__link">
         
   
   
@@ -327,7 +327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mobile_integration/" class="md-nav__link">
+      <a href="../../integration/mobile_integration/" class="md-nav__link">
         
   
   
@@ -347,32 +347,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Troubleshooting & FAQ
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../integration/troubleshooting/" class="md-nav__link">
         
   
   
@@ -383,104 +361,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#common-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Issues
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Common Issues">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-sdk-fails-to-connect" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. SDK Fails to Connect
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-authentication-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Authentication Errors
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-messages-not-received" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Messages Not Received
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-ui-not-updating" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. UI Not Updating
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-cors-or-https-errors-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. CORS or HTTPS Errors (Web)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#debugging-tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      Debugging Tips
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
-    <span class="md-ellipsis">
-      Support
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -659,20 +539,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -688,7 +568,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Threat Modeling
@@ -702,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.%20Threat%20Modeling/threat_modeling_overview/" class="md-nav__link">
+      <a href="../threat_modeling_overview/" class="md-nav__link">
         
   
   
@@ -791,20 +671,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
         
           
           <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -820,7 +700,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
             Application Architecture Review
@@ -831,10 +711,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../3.%20Threat%20Modeling/component_threat_analysis/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Component-Level Threat Analysis
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -845,6 +747,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#end-user-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      End User Devices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partner-web-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partner Web App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partner-admin-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partner Admin Users
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprinklr-live-chat-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprinklr Live Chat Service
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-context-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Context Service
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprinklr-dashboard-integration-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprinklr Dashboard &amp; Integration Backend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s2s-llm-callback-to-partner-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      S2S LLM Callback to Partner Backend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprinklr-sdk-security-supply-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprinklr SDK Security &amp; Supply Chain
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -857,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.%20Threat%20Modeling/stride_mapping/" class="md-nav__link">
+      <a href="../stride_mapping/" class="md-nav__link">
         
   
   
@@ -880,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.%20Threat%20Modeling/data_compliance/" class="md-nav__link">
+      <a href="../data_compliance/" class="md-nav__link">
         
   
   
@@ -903,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.%20Threat%20Modeling/availability_recovery/" class="md-nav__link">
+      <a href="../availability_recovery/" class="md-nav__link">
         
   
   
@@ -1329,78 +1323,72 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#common-issues" class="md-nav__link">
+  <a href="#end-user-devices" class="md-nav__link">
     <span class="md-ellipsis">
-      Common Issues
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Common Issues">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-sdk-fails-to-connect" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. SDK Fails to Connect
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-authentication-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Authentication Errors
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-messages-not-received" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Messages Not Received
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-ui-not-updating" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. UI Not Updating
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-cors-or-https-errors-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. CORS or HTTPS Errors (Web)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#debugging-tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      Debugging Tips
+      End User Devices
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
+  <a href="#partner-web-app" class="md-nav__link">
     <span class="md-ellipsis">
-      Support
+      Partner Web App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partner-admin-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partner Admin Users
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprinklr-live-chat-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprinklr Live Chat Service
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-context-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Context Service
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprinklr-dashboard-integration-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprinklr Dashboard &amp; Integration Backend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s2s-llm-callback-to-partner-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      S2S LLM Callback to Partner Backend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprinklr-sdk-security-supply-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprinklr SDK Security &amp; Supply Chain
     </span>
   </a>
   
@@ -1422,46 +1410,255 @@
 
 
 
-<h1 id="troubleshooting-faq">Troubleshooting &amp; FAQ</h1>
-<p>This section provides solutions to common issues encountered during the integration of the Sprinklr Live Chat SDK, as well as frequently asked questions.</p>
-<h2 id="common-issues">Common Issues</h2>
-<h3 id="1-sdk-fails-to-connect">1. SDK Fails to Connect</h3>
-<ul>
-<li><strong>Check network connectivity and firewall settings.</strong></li>
-<li><strong>Verify orgId and apiKey are correct.</strong></li>
-<li><strong>Ensure the environment (production/staging) is set properly.</strong></li>
-<li><strong>Check for typos in initialization code.</strong></li>
-</ul>
-<h3 id="2-authentication-errors">2. Authentication Errors</h3>
-<ul>
-<li><strong>Ensure the session token is valid and not expired.</strong></li>
-<li><strong>Confirm the backend is issuing tokens correctly.</strong></li>
-<li><strong>Check time synchronization between client and server.</strong></li>
-</ul>
-<h3 id="3-messages-not-received">3. Messages Not Received</h3>
-<ul>
-<li><strong>Verify the chat is connected before sending/receiving messages.</strong></li>
-<li><strong>Check event handler registration (onMessage, on).</strong></li>
-<li><strong>Inspect browser or device console/logs for errors.</strong></li>
-</ul>
-<h3 id="4-ui-not-updating">4. UI Not Updating</h3>
-<ul>
-<li><strong>Ensure your chat UI is listening for SDK events.</strong></li>
-<li><strong>Debug with sample data to isolate UI issues from SDK issues.</strong></li>
-</ul>
-<h3 id="5-cors-or-https-errors-web">5. CORS or HTTPS Errors (Web)</h3>
-<ul>
-<li><strong>Use HTTPS for all endpoints.</strong></li>
-<li><strong>Check CORS headers on your backend and Sprinklr endpoints.</strong></li>
-</ul>
-<h2 id="debugging-tips">Debugging Tips</h2>
-<ul>
-<li>Enable verbose logging in the SDK if available.</li>
-<li>Use browser dev tools or mobile device logs to inspect network requests.</li>
-<li>Test with sample credentials and a minimal app to isolate issues.</li>
-</ul>
-<h2 id="support">Support</h2>
-<p>If issues persist, contact Sprinklr support with logs, error messages, and integration details.</p>
+<h1 id="component-level-threat-analysis">Component-Level Threat Analysis</h1>
+<p>This section provides a detailed threat analysis for each major component of the Sprinklr Live Chat system, including threats, mitigations, known gaps, potential impacts, incident response, and dependencies.</p>
+<hr />
+<h2 id="end-user-devices">End User Devices</h2>
+<p><strong>Threats:</strong>
+- Device compromise (malware, root/jailbreak, keyloggers)
+- Session hijacking (stolen tokens, browser vulnerabilities)
+- Phishing (credential theft, fake login pages)
+- Session token compromise via XSS on partner domain if Sprinklr tokens are stored in localStorage or cookies
+- Use of outdated or insecure browsers</p>
+<p><strong>Mitigations:</strong>
+- Secure tokens (short-lived, bound to device/browser)
+- HTTPS enforced for all communications
+- User education and anti-phishing guidance
+- Sprinklr session tokens must be stored only in memory (never in localStorage or cookies)
+- Document and enforce this in SDK and integration guides
+- Warn users on outdated/insecure browsers</p>
+<p><strong>Known Security Gaps / Limitations:</strong>
+- Device-level compromise (malware/root) may bypass all browser-based controls
+- Reliance on partner browser security for XSS/CSRF protection
+- User behavior (e.g., falling for phishing) is hard to control</p>
+<p><strong>Potential Impact / Failure Scenarios:</strong>
+- Compromised device can leak session tokens, credentials, or chat data
+- Phishing may result in account takeover or impersonation
+- XSS on partner domain could expose Sprinklr session tokens if not properly protected</p>
+<p><strong>Incident Response &amp; Monitoring:</strong>
+- Monitor for anomalous login/session activity
+- Alert on multiple device logins or suspicious geolocations
+- Provide rapid session/token revocation on suspected compromise</p>
+<p><strong>Dependencies:</strong>
+- Partner browser security and update process
+- User security awareness
+- Sprinklr SDK session management</p>
+<hr />
+<h2 id="partner-web-app">Partner Web App</h2>
+<p><strong>Threats:</strong>
+- XSS/CSRF
+- Supply chain (SDK)
+- API key leakage
+- Unauthorized SDK use by unapproved partners/domains
+- Dependency compromise</p>
+<p><strong>Mitigations:</strong>
+- CSP
+- Input validation
+- SDK integrity checks
+- Strict CORS policy
+- Domain whitelisting
+- Signed SDK delivery
+- Subresource integrity (SRI)
+- Regular dependency audits</p>
+<p><strong>Known Security Gaps / Limitations:</strong>
+- If the partner app is compromised (e.g., via XSS), Sprinklr session tokens in memory may still be at risk.
+- Reliance on partner-side enforcement for domain whitelisting and CORS; misconfiguration can expose APIs or SDK.
+- Supply chain attacks on dependencies may not be detected immediately.
+- If a partner app bans or revokes an end user's access during an active session, the user may continue to interact with Sprinklr until their short-lived session token expires (token revocation lag).</p>
+<p><strong>Potential Impact / Failure Scenarios:</strong>
+- Successful XSS or supply chain attack could allow attackers to impersonate users, steal tokens, or manipulate chat.
+- Misconfigured CORS or domain whitelist could allow unauthorized access to Sprinklr APIs or SDK.
+- Dependency compromise could introduce malicious code into the partner app.
+- Banned or deprovisioned users may retain access to live chat for the duration of their valid session token, potentially violating partner policy or compliance requirements.</p>
+<p><strong>Incident Response &amp; Monitoring:</strong>
+- Monitor for anomalous API usage patterns and failed CORS/domain checks.
+- Alert on unusual SDK download patterns or integrity check failures.
+- Rapidly revoke/rotate API keys and session tokens if compromise is detected.</p>
+<p><strong>Dependencies:</strong>
+- Partner browser security (XSS, CSP enforcement)
+- Sprinklr SDK integrity and update process
+- External package registries (npm, etc.)
+- Sprinklr API and authentication endpoints</p>
+<hr />
+<h2 id="partner-admin-users">Partner Admin Users</h2>
+<p><strong>Threats:</strong>
+- Credential theft (phishing, malware, password reuse)
+- Privilege escalation (misconfigured roles, dashboard bugs)
+- Session hijacking
+- Insider threats (malicious or negligent admin actions)
+- API key/secret leakage
+- Social engineering attacks targeting admin users</p>
+<p><strong>Mitigations:</strong>
+- Enforce MFA for all admin logins
+- Role-based access control (RBAC) with least privilege
+- Backend-enforced IP whitelisting per organization/vendor for dashboard access
+- Strong password policies and periodic rotation
+- Secure session management (short TTL, inactivity timeout)
+- Audit logging of all admin actions and configuration changes
+- Regular review of admin accounts and privileges
+- User education and anti-phishing training</p>
+<p><strong>Known Security Gaps / Limitations:</strong>
+- If an admin account is compromised, attacker may have broad access until detected and revoked
+- Reliance on partner organization to promptly deprovision former admins
+- Social engineering attacks may bypass technical controls</p>
+<p><strong>Potential Impact / Failure Scenarios:</strong>
+- Compromised admin account could lead to unauthorized configuration changes, API key/secret exposure, or disabling of security controls
+- Privilege escalation could allow a lower-privileged user to gain admin access
+- Insider threat could result in intentional or accidental data leakage or service disruption</p>
+<p><strong>Incident Response &amp; Monitoring:</strong>
+- Monitor and alert on suspicious admin activity (e.g., logins from new locations, privilege changes, mass config updates)
+- Alert on access attempts from non-whitelisted IPs
+- Immediate revocation of compromised admin accounts and rotation of exposed secrets
+- Regular review of audit logs for anomalous or unauthorized actions
+- Defined escalation and recovery procedures for admin account compromise</p>
+<p><strong>Dependencies:</strong>
+- Identity provider and authentication mechanisms (MFA, SSO)
+- Secure dashboard implementation and RBAC enforcement
+- Accurate org/vendor IP inventory and backend IP whitelisting enforcement
+- Timely communication from partner organizations regarding admin personnel changes</p>
+<hr />
+<h2 id="sprinklr-live-chat-service">Sprinklr Live Chat Service</h2>
+<p><strong>Threats:</strong>
+- WebSocket hijacking
+- DOS / DDoS Attacks
+- Cross-tenant leakage
+- Session persistence after partner-side user ban/revocation
+- Multiple simultaneous sessions by the same user (potential DoS/DDoS/resource exhaustion)</p>
+<p><strong>Mitigations:</strong>
+- TLS
+- Session authentication
+- Tenant isolation
+- Hidden CAPTCHA and bot detection to prevent automated abuse and bot-driven DoS
+- Support for short-lived tokens and, if feasible, real-time token revocation or session invalidation
+- Enforce only one active live chat session per end user</p>
+<p><strong>Known Security Gaps / Limitations:</strong>
+- If a partner revokes or bans a user's access during an active chat session, the user may continue to interact with Sprinklr until their session token expires, unless real-time revocation is implemented.</p>
+<p><strong>Potential Impact / Failure Scenarios:</strong>
+- Banned or deprovisioned users from a partner, may still continue to access live chat, potentially leading to compliance or abuse issues.
+- Multiple active sessions for a single user could be abused to exhaust system resources or disrupt service availability.</p>
+<p><strong>Incident Response &amp; Monitoring:</strong>
+- Monitor for chat activity from users recently deprovisioned by the partner.
+- Provide mechanisms for partners to request immediate session invalidation if required.</p>
+<p><strong>Dependencies:</strong>
+- Partner-side user management and ban/revocation logic
+- Sprinklr session token TTL and revocation mechanisms</p>
+<hr />
+<h2 id="llm-context-service">LLM Context Service</h2>
+<p><strong>Threats:</strong>
+- Malicious uploads (poisoned FAQ/knowledge, prompt injection)
+- Chat messages from user can also lead to prompt injection
+- Data poisoning (intentional or accidental)
+- LLM output leakage (sensitive data exposure)
+- Abuse of LLM agentic flows (unintended function calls)
+- Excessive or malformed requests (DoS)</p>
+<p><strong>Mitigations:</strong>
+- Upload validation and sanitization for all partner-provided data
+- LLM output monitoring and filtering for sensitive data
+- Add and maintain an internal LLM guardrail layer on top of local or external LLM services to prevent prompt injection and enforce policy
+- End-user-based isolation to prevent cross-user/tenant data leakage
+- Rate limiting and quotas on LLM queries
+- Least privilege for LLM agentic flows (function whitelisting)
+- Audit logging of uploads and LLM queries</p>
+<p><strong>Known Security Gaps / Limitations:</strong>
+- LLMs may still leak sensitive data if prompt/output filtering is bypassed
+- New LLM vulnerabilities may emerge (prompt injection, jailbreaks)
+- Reliance on partner to provide clean, non-malicious data</p>
+<p><strong>Potential Impact / Failure Scenarios:</strong>
+- Data poisoning could degrade LLM accuracy or cause harmful outputs
+- Sensitive data leakage via LLM responses
+- LLM agentic flows could trigger unintended actions</p>
+<p><strong>Incident Response &amp; Monitoring:</strong>
+- Monitor for anomalous LLM queries and outputs
+- Alert on upload of suspicious or malformed data
+- Rapid rollback of poisoned knowledge uploads</p>
+<p><strong>Dependencies:</strong>
+- LLM provider security and update process
+- Partner data hygiene
+- Sprinklr upload validation and monitoring</p>
+<hr />
+<h2 id="sprinklr-dashboard-integration-backend">Sprinklr Dashboard &amp; Integration Backend</h2>
+<p><strong>Threats:</strong>
+- XSS/CSRF in dashboard UI
+- API key/secret leakage (in logs, browser, or config)
+- Insider threats (malicious or negligent admin actions)
+- Privilege escalation via dashboard bugs
+- Misconfiguration leading to exposure of sensitive data or APIs</p>
+<p><strong>Mitigations:</strong>
+- Secure coding practices (input validation, output encoding)
+- Strong authentication (MFA, SSO)
+- Audit logging of all admin/config actions
+- RBAC and least privilege for dashboard users
+- Secure storage and handling of API keys/secrets
+- Regular security reviews and penetration testing</p>
+<p><strong>Known Security Gaps / Limitations:</strong>
+- Insider threats may bypass technical controls
+- Reliance on timely deprovisioning of admin users
+- Complex configuration may lead to accidental exposure</p>
+<p><strong>Potential Impact / Failure Scenarios:</strong>
+- XSS/CSRF could allow attacker to hijack admin sessions or modify config
+- API key/secret leakage could compromise partner integrations
+- Misconfiguration could expose sensitive data or APIs</p>
+<p><strong>Incident Response &amp; Monitoring:</strong>
+- Monitor and alert on suspicious dashboard activity
+- Immediate revocation of compromised admin accounts or secrets
+- Regular review of audit logs and config changes</p>
+<p><strong>Dependencies:</strong>
+- Secure dashboard implementation and update process
+- Identity provider (MFA, SSO)
+- Timely communication from partner organizations regarding admin changes</p>
+<hr />
+<h2 id="s2s-llm-callback-to-partner-backend">S2S LLM Callback to Partner Backend</h2>
+<p><strong>Threats:</strong>
+- Unauthorized S2S access (spoofed Sprinklr calls)
+- Data leakage (sensitive data in callback)
+- Token hijack from a legit user can expose sensitive information from the user
+- Replay or injection attacks
+- Callback flooding (DoS)
+- Misconfigured callback endpoints</p>
+<p><strong>Mitigations:</strong>
+- Mutual TLS (mTLS) for all S2S callbacks
+- Strict validation of callback data and endpoints
+- For sensitive/customer-specific information, do not fetch directly via S2S; instead, send a redirection/request to the end user, who forwards it to the partner backend, preserving compliance and reducing risk of exposure
+- Rate limiting and quotas on callback requests
+- Signed requests and nonces to prevent replay/injection
+- Allowlisting of partner callback endpoints</p>
+<p><strong>Known Security Gaps / Limitations:</strong>
+- Reliance on partner to secure their backend and endpoints
+- Callback endpoint misconfiguration may expose data
+- mTLS certificate management complexity</p>
+<p><strong>Potential Impact / Failure Scenarios:</strong>
+- Unauthorized access to partner backend or data leakage
+- Callback flooding could disrupt partner backend availability
+- Replay/injection could result in unauthorized actions</p>
+<p><strong>Incident Response &amp; Monitoring:</strong>
+- Monitor and alert on failed or suspicious callback attempts
+- Rapid revocation of mTLS certificates on compromise
+- Regular review of callback endpoint configuration</p>
+<p><strong>Dependencies:</strong>
+- Partner backend security and endpoint management
+- Sprinklr mTLS certificate management
+- Callback validation and monitoring</p>
+<hr />
+<h2 id="sprinklr-sdk-security-supply-chain">Sprinklr SDK Security &amp; Supply Chain</h2>
+<p><strong>Feature: Automatic SDK Updates (Hot Patching)</strong>
+- The Sprinklr SDK is delivered via a central CDN URL (e.g., CloudFront/S3). By updating the SDK at this location, all partner web apps automatically receive the latest version without requiring code changes or redeployment by the partner.
+- This enables rapid rollout of security hot patches and critical fixes in response to emerging threats.</p>
+<p><strong>Threats:</strong>
+- Supply chain attacks (malicious/tampered SDK, compromised dependencies)
+- Unauthorized use of SDK by unapproved partners/domains
+- SDK delivery via insecure channels (MITM, spoofing)
+- Compromise of the SDK delivery pipeline could instantly impact all partners
+- Unintended breaking changes or regressions due to auto-update</p>
+<p><strong>Mitigations:</strong>
+- Serve SDK only over HTTPS with strong authentication and access control
+- Use signed SDK bundles and enforce subresource integrity (SRI) in partner apps
+- Maintain a domain/app whitelist for SDK access (enforced at delivery and runtime)
+- Harden CSP and CORS policies to restrict resource loading and cross-origin requests
+- Regularly audit SDK dependencies and monitor for vulnerabilities
+- Provide versioned SDKs and deprecate insecure versions promptly
+- Audit logging and alerting for all SDK updates
+- Strict access controls and multi-party approval for SDK publishing
+- Option for partners to pin SDK versions for stability/compliance, with clear communication protocol for emergency hot patches</p>
 
 
 

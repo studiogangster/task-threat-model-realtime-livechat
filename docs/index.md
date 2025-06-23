@@ -20,7 +20,14 @@ This documentation is organized to provide a clear, end-to-end view of the syste
 - **Secure Architecture:** Best practices for authentication, authorization, data protection, and secure deployment.
 - **Incident Response:** Playbooks, monitoring, and response strategies for security events.
 
-### 3. Supporting Materials
+### 3. Threat Modeling Deep Dive
+- **Overview:** Summary of the threat modeling approach, key definitions, and high-level diagrams.
+- **Component-Level Threat Analysis:** Per-component threats, mitigations, and open questions.
+- **STRIDE Threat Mapping:** Threat category mapping and detailed tables.
+- **Data Storage & Compliance:** Data inventory, compliance matrix, and open compliance questions.
+- **Service Availability & Recovery:** Availability threats, mitigations, and recovery plans.
+
+### 4. Supporting Materials
 - **Glossary:** Definitions of key terms, acronyms, and cloud/security concepts.
 - **Diagrams:** System, data flow, and threat model diagrams (embedded throughout the docs).
 - **References:** Links to standards, frameworks, and external resources.
@@ -29,9 +36,11 @@ This documentation is organized to provide a clear, end-to-end view of the syste
 
 ## How to Use This Documentation
 
-- **For Security Architects:** Review the end-to-end process of secure system design, from requirements to incident response.
-- **For Developers:** Understand integration points, security controls, and best practices for building on the platform.
-- **For Interviewers:** Assess the candidate’s ability to structure, analyze, and communicate complex security architectures.
+- **Start with System Design** to understand the high-level architecture, actors, and data flows.
+- **Review Security Architecture** for secure design principles, trust boundaries, and legacy threat models.
+- **Explore the Threat Modeling Deep Dive** for a detailed, structured analysis of threats, mitigations, and open questions—this section is especially useful for security reviews, interviews, and in-depth learning.
+- **Use the Glossary and Diagrams** for quick reference and visual understanding.
+- Navigation is available via the sidebar; each section is self-contained but cross-referenced for deeper exploration.
 
 ---
 
@@ -44,4 +53,3 @@ This documentation is organized to provide a clear, end-to-end view of the syste
 
 ---
 
-> **Note:** This documentation reflects an ongoing security architecture and threat modeling activity for the Sprinklr Live Chat SDK. It is designed to be extensible and adaptable as the platform evolves and new requirements emerge.

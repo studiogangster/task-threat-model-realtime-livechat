@@ -6,8 +6,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://sprinklr-threat-model.meddler.io/2.%20Secure%20Architecture/data_flows/" rel="canonical"/>
-<link href="../overview/" rel="prev"/>
-<link href="../trust_boundary/" rel="next"/>
+<link href="../trust_boundary/" rel="prev"/>
+<link href="../cloud_architecture/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.14" name="generator"/>
 <title>Data Flows - Sprinklr Live Chat SDK</title>
@@ -108,7 +108,7 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
 <span class="md-ellipsis">
     SDK Integration
@@ -166,7 +166,7 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
 <span class="md-ellipsis">
     System Design
@@ -223,17 +223,218 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Threat Modeling
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Threat Modeling
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3.%20Threat%20Modeling/threat_modeling_overview/">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../trust_boundary/">
+<span class="md-ellipsis">
+    Trust Boundaries
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Data Flows
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Data Flows
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-points">
+<span class="md-ellipsis">
+      Key Points
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#detailed-data-flow-sections">
+<span class="md-ellipsis">
+      Detailed Data Flow Sections
+    </span>
+</a>
+<nav aria-label="Detailed Data Flow Sections" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-user-authentication-flow">
+<span class="md-ellipsis">
+      1. User Authentication Flow
+    </span>
+</a>
+<nav aria-label="1. User Authentication Flow" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#actors">
+<span class="md-ellipsis">
+      Actors:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#steps">
+<span class="md-ellipsis">
+      Steps
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#security-controls">
+<span class="md-ellipsis">
+      Security Controls:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-chat-session-management-flow">
+<span class="md-ellipsis">
+      2. Chat Session Management Flow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-llm-context-query-flow">
+<span class="md-ellipsis">
+      3. LLM Context Query Flow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-s2sapi-call-flow">
+<span class="md-ellipsis">
+      4. S2S/API Call Flow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-secure-sdk-delivery-flow">
+<span class="md-ellipsis">
+      5. Secure SDK Delivery Flow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sensitive-data-types">
+<span class="md-ellipsis">
+      Sensitive Data Types
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cloud_architecture/">
+<span class="md-ellipsis">
+    Cloud Architecture Review
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Application Architecture Review
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_5">
+<span class="md-nav__icon md-icon"></span>
+            Application Architecture Review
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3.%20Threat%20Modeling/component_threat_analysis/">
+<span class="md-ellipsis">
+    Component-Level Threat Analysis
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3.%20Threat%20Modeling/stride_mapping/">
+<span class="md-ellipsis">
+    STRIDE Threat Mapping
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3.%20Threat%20Modeling/data_compliance/">
+<span class="md-ellipsis">
+    Data Storage &amp; Compliance
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3.%20Threat%20Modeling/availability_recovery/">
+<span class="md-ellipsis">
+    Service Availability &amp; Recovery
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
 <span class="md-ellipsis">
     Security Design Q&amp;A Session
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
             Security Design Q&amp;A Session
           </label>
@@ -345,111 +546,6 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-<span class="md-ellipsis">
-    Threat Modeling
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
-            Threat Modeling
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../overview/">
-<span class="md-ellipsis">
-    Overview
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Data Flows
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
-<span class="md-ellipsis">
-    Data Flows
-    
-  </span>
-</a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#key-points">
-<span class="md-ellipsis">
-      Key Points
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../trust_boundary/">
-<span class="md-ellipsis">
-    🔐 Trust Boundaries
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../cloud_architecture/">
-<span class="md-ellipsis">
-    Cloud Architecture Review
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../architecture/">
-<span class="md-ellipsis">
-    Architecture (Legacy)
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../threat-model/threat_model.md">
-<span class="md-ellipsis">
-    Threat Model (Application)
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../threat-model/threat_model_cloud.md">
-<span class="md-ellipsis">
-    Threat Model (Cloud)
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../threat-model/secure_architecture.md">
-<span class="md-ellipsis">
-    Secure Architecture (Legacy)
-    
-  </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../glossary/">
 <span class="md-ellipsis">
@@ -479,6 +575,84 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#detailed-data-flow-sections">
+<span class="md-ellipsis">
+      Detailed Data Flow Sections
+    </span>
+</a>
+<nav aria-label="Detailed Data Flow Sections" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-user-authentication-flow">
+<span class="md-ellipsis">
+      1. User Authentication Flow
+    </span>
+</a>
+<nav aria-label="1. User Authentication Flow" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#actors">
+<span class="md-ellipsis">
+      Actors:
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#steps">
+<span class="md-ellipsis">
+      Steps
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#security-controls">
+<span class="md-ellipsis">
+      Security Controls:
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-chat-session-management-flow">
+<span class="md-ellipsis">
+      2. Chat Session Management Flow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-llm-context-query-flow">
+<span class="md-ellipsis">
+      3. LLM Context Query Flow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-s2sapi-call-flow">
+<span class="md-ellipsis">
+      4. S2S/API Call Flow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-secure-sdk-delivery-flow">
+<span class="md-ellipsis">
+      5. Secure SDK Delivery Flow
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sensitive-data-types">
+<span class="md-ellipsis">
+      Sensitive Data Types
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </div>
@@ -491,16 +665,20 @@
 <div class="mermaid">flowchart TD
   EU["End User"]
   PWA["Partner Web App"]
-  AGW["API Gateway"]
+  PB["Partner Backend"]
+  AGW["Sprinklr API Gateway"]
   ECS["App Services"]
   LLM["LLM Context Service"]
   RDS["Database"]
   S3["S3 Storage &amp; SDK"]
   CF["CloudFront CDN"]
-  PB["Partner Backend"]
 
   EU -- "Login/Chat" --&gt; PWA
-  PWA -- "API Request" --&gt; AGW
+  PWA -- "Authenticate" --&gt; PB
+  PB -- "Obtain Sprinklr Token" --&gt; AGW
+  AGW -- "Issue End-User Token" --&gt; PB
+  PB -- "Forward Sprinklr Token" --&gt; PWA
+  PWA -- "API Request (with Sprinklr Token)" --&gt; AGW
   AGW -- "Routes" --&gt; ECS
   ECS -- "Session/Chat Data" --&gt; RDS
   ECS -- "Knowledge/Files" --&gt; S3
@@ -518,30 +696,108 @@
 <li>All API and chat flows are authenticated and authorized.</li>
 <li>The SDK is delivered securely via CloudFront and S3, ensuring integrity and availability.</li>
 </ul>
+<hr/>
+<h2 id="detailed-data-flow-sections">Detailed Data Flow Sections</h2>
+<h3 id="1-user-authentication-flow">1. User Authentication Flow</h3>
+<h4 id="actors">Actors:</h4>
+<ul>
+<li>End User</li>
+<li>Partner Web App</li>
+<li>Partner Backend</li>
+<li>Sprinklr API Gateway</li>
+<li>App Services</li>
+<li>Database</li>
+</ul>
+<h4 id="steps">Steps</h4>
+<ol>
+<li>End User authenticates with the Partner Web App (PWA) using the partner's identity provider.</li>
+<li>The PWA, upon successful authentication, securely communicates with the Partner Backend (PB) to request access to Sprinklr services.</li>
+<li>The Partner Backend authenticates the user/session and then initiates a secure request to the Sprinklr API Gateway (AGW) to obtain a Sprinklr end-user token on behalf of the user.</li>
+<li>The Sprinklr API Gateway validates the request (e.g., using OAuth2 client credentials, signed JWT, or SSO assertion) and issues a Sprinklr end-user token (JWT or similar) to the Partner Backend.</li>
+<li>The Partner Backend forwards the Sprinklr token to the PWA.</li>
+<li>The PWA stores the Sprinklr token securely (in memory or secure storage) and uses it for all subsequent API requests to Sprinklr services.</li>
+<li>All tokens and credentials are encrypted in transit (TLS) and at rest (DB encryption).</li>
+<li>Trust boundaries: End User ↔️ PWA, PWA ↔️ PB, PB ↔️ AGW, AGW ↔️ ECS.</li>
+</ol>
+<h4 id="security-controls">Security Controls:</h4>
+<ul>
+<li>TLS for all communications.</li>
+<li>Strong authentication and authorization between PWA and PB, and PB and AGW (OAuth2, SSO, signed JWT).</li>
+<li>Sprinklr session tokens signed and validated.</li>
+<li>PWA never exposes Sprinklr credentials to the end user.</li>
+<li>Rate limiting and monitoring at AGW and PB.</li>
+</ul>
+<hr/>
+<h3 id="2-chat-session-management-flow">2. Chat Session Management Flow</h3>
+<p><strong>Actors:</strong> End User, Partner Web App, API Gateway, App Services, Database</p>
+<p><strong>Steps:</strong>
+1. Authenticated End User starts or resumes a chat session via PWA.
+2. PWA sends chat requests (initiate, send message, fetch history) to AGW.
+3. AGW routes requests to ECS, which manages chat state and persists messages in RDS.
+4. ECS enforces access control, ensuring users can only access their own sessions.
+5. All chat data is encrypted in transit and at rest.</p>
+<p><strong>Security Controls:</strong>
+- Authenticated API access.
+- Access control checks in ECS.
+- Audit logging of chat actions.
+- Data encryption (TLS, DB encryption).</p>
+<hr/>
+<h3 id="3-llm-context-query-flow">3. LLM Context Query Flow</h3>
+<p><strong>Actors:</strong> App Services, LLM Context Service, Database, S3 Storage</p>
+<p><strong>Steps:</strong>
+1. ECS formulates a context query for the LLM Context Service (LLM).
+2. Query and any required data are sent over secure internal channels.
+3. LLM may fetch additional context from RDS or S3 (knowledge base, files).
+4. LLM returns results to ECS, which may update RDS or S3 as needed.</p>
+<p><strong>Security Controls:</strong>
+- Internal service-to-service authentication (mTLS, IAM roles).
+- Data minimization: only required context is shared.
+- Logging and monitoring of LLM queries.
+- Encryption in transit and at rest.</p>
+<hr/>
+<h3 id="4-s2sapi-call-flow">4. S2S/API Call Flow</h3>
+<p><strong>Actors:</strong> App Services, Partner Backend</p>
+<p><strong>Steps:</strong>
+1. ECS initiates a server-to-server (S2S) API call to the Partner Backend (PB) for integration (e.g., fetching user data).
+2. Calls are authenticated using API keys, OAuth, or signed requests.
+3. Sensitive data exchanged is encrypted in transit.</p>
+<p><strong>Security Controls:</strong>
+- Mutual authentication (API keys, OAuth, mTLS).
+- Least privilege access (scoped tokens).
+- Monitoring and alerting on S2S/API activity.</p>
+<hr/>
+<h3 id="5-secure-sdk-delivery-flow">5. Secure SDK Delivery Flow</h3>
+<p><strong>Actors:</strong> Partner Web App, CloudFront CDN, S3 Storage</p>
+<p><strong>Steps:</strong>
+1. PWA requests the SDK from CloudFront (CF).
+2. CF serves the SDK, fetching from S3 if needed.
+3. SDK is delivered over HTTPS, ensuring integrity and confidentiality.</p>
+<p><strong>Security Controls:</strong>
+- SDK integrity checks (hash/signature validation).
+- HTTPS enforced for all SDK delivery.
+- S3 bucket access restricted to CF.
+- Monitoring for unauthorized access attempts.</p>
+<hr/>
+<h3 id="sensitive-data-types">Sensitive Data Types</h3>
+<ul>
+<li>User credentials and tokens</li>
+<li>Chat messages and session data</li>
+<li>LLM context and knowledge base files</li>
+<li>API keys and integration secrets</li>
+<li>SDK binaries</li>
+</ul>
+<p>All sensitive data is protected with encryption, access controls, and monitoring.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
 </div>
 </main>
-<footer class="md-footer">
-<div class="md-footer-meta md-typeset">
-<div class="md-footer-meta__inner md-grid">
-<div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
-      Material for MkDocs
-    </a>
-</div>
-</div>
-</div>
-</footer>
+<!-- Overridden footer: intentionally left blank to remove default MkDocs Material footer -->
 </div>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
 <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
 mermaid.initialize({});</script></body>

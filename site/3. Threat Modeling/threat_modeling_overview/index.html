@@ -5,10 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://sprinklr-threat-model.meddler.io/2.%20Secure%20Architecture/architecture/" rel="canonical"/>
+<link href="https://sprinklr-threat-model.meddler.io/3.%20Threat%20Modeling/threat_modeling_overview/" rel="canonical"/>
+<link href="../../1.%20System%20Design/deployment/" rel="prev"/>
+<link href="../../2.%20Secure%20Architecture/trust_boundary/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.14" name="generator"/>
-<title>Architecture: Sprinklr Live Chat - Sprinklr Live Chat SDK</title>
+<title>Overview - Sprinklr Live Chat SDK</title>
 <link href="../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -20,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#architecture-sprinklr-live-chat">
+<a class="md-skip" href="#threat-modeling-overview">
           Skip to content
         </a>
 </div>
@@ -44,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Architecture: Sprinklr Live Chat
+              Overview
             
           </span>
 </div>
@@ -221,8 +223,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
 <span class="md-ellipsis">
     Threat Modeling
@@ -230,22 +232,91 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
             Threat Modeling
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../3.%20Threat%20Modeling/threat_modeling_overview/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Overview
     
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#purpose">
+<span class="md-ellipsis">
+      Purpose
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../trust_boundary/">
+<a class="md-nav__link" href="#key-definitions">
+<span class="md-ellipsis">
+      Key Definitions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#high-level-system-architecture">
+<span class="md-ellipsis">
+      High-Level System Architecture
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#trust-boundaries">
+<span class="md-ellipsis">
+      Trust Boundaries
+    </span>
+</a>
+<nav aria-label="Trust Boundaries" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-end-user-live-chat-sprinklr">
+<span class="md-ellipsis">
+      Example: End User → Live Chat (Sprinklr)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#threat-modeling-scope">
+<span class="md-ellipsis">
+      Threat Modeling Scope
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references">
+<span class="md-ellipsis">
+      References
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../2.%20Secure%20Architecture/trust_boundary/">
 <span class="md-ellipsis">
     Trust Boundaries
     
@@ -253,7 +324,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../data_flows/">
+<a class="md-nav__link" href="../../2.%20Secure%20Architecture/data_flows/">
 <span class="md-ellipsis">
     Data Flows
     
@@ -261,7 +332,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../cloud_architecture/">
+<a class="md-nav__link" href="../../2.%20Secure%20Architecture/cloud_architecture/">
 <span class="md-ellipsis">
     Cloud Architecture Review
     
@@ -284,7 +355,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../3.%20Threat%20Modeling/component_threat_analysis/">
+<a class="md-nav__link" href="../component_threat_analysis/">
 <span class="md-ellipsis">
     Component-Level Threat Analysis
     
@@ -292,7 +363,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../3.%20Threat%20Modeling/stride_mapping/">
+<a class="md-nav__link" href="../stride_mapping/">
 <span class="md-ellipsis">
     STRIDE Threat Mapping
     
@@ -300,7 +371,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../3.%20Threat%20Modeling/data_compliance/">
+<a class="md-nav__link" href="../data_compliance/">
 <span class="md-ellipsis">
     Data Storage &amp; Compliance
     
@@ -308,7 +379,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../3.%20Threat%20Modeling/availability_recovery/">
+<a class="md-nav__link" href="../availability_recovery/">
 <span class="md-ellipsis">
     Service Availability &amp; Recovery
     
@@ -466,31 +537,38 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#1-high-level-system-architecture">
+<a class="md-nav__link" href="#purpose">
 <span class="md-ellipsis">
-      1. High-Level System Architecture
+      Purpose
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-sprinklr-saas-cloud-architecture-data-flows">
+<a class="md-nav__link" href="#key-definitions">
 <span class="md-ellipsis">
-      2. Sprinklr SaaS Cloud Architecture &amp; Data Flows
+      Key Definitions
     </span>
 </a>
-<nav aria-label="2. Sprinklr SaaS Cloud Architecture &amp; Data Flows" class="md-nav">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#high-level-system-architecture">
+<span class="md-ellipsis">
+      High-Level System Architecture
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#trust-boundaries">
+<span class="md-ellipsis">
+      Trust Boundaries
+    </span>
+</a>
+<nav aria-label="Trust Boundaries" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#21-high-level-aws-system-architecture">
+<a class="md-nav__link" href="#example-end-user-live-chat-sprinklr">
 <span class="md-ellipsis">
-      2.1 High-Level AWS System Architecture
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#22-data-flow-diagram-dfd">
-<span class="md-ellipsis">
-      2.2 Data Flow Diagram (DFD)
+      Example: End User → Live Chat (Sprinklr)
     </span>
 </a>
 </li>
@@ -498,16 +576,16 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3-data-flow-diagrams">
+<a class="md-nav__link" href="#threat-modeling-scope">
 <span class="md-ellipsis">
-      3. Data Flow Diagrams
+      Threat Modeling Scope
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#summary">
+<a class="md-nav__link" href="#references">
 <span class="md-ellipsis">
-      Summary
+      References
     </span>
 </a>
 </li>
@@ -518,17 +596,30 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="architecture-sprinklr-live-chat">Architecture: Sprinklr Live Chat</h1>
-<h2 id="1-high-level-system-architecture">1. High-Level System Architecture</h2>
-<p>This section provides a top-level overview of the main trust boundaries and data flows in the Sprinklr Live Chat system. It illustrates how the End User interacts with the Client Web App, how authentication and session tokens are managed, and how the Client Web App and End User communicate with the Sprinklr SaaS platform for live chat functionality. The diagram highlights the separation between client and Sprinklr trust boundaries and the key steps in the authentication and chat flow.</p>
+<h1 id="threat-modeling-overview">Threat Modeling Overview</h1>
+<p>This section provides a summary of the threat modeling approach, key definitions, and high-level architecture and trust boundary diagrams for the Sprinklr Live Chat system.</p>
+<hr/>
+<h2 id="purpose">Purpose</h2>
+<p>The threat modeling process systematically identifies, analyzes, and mitigates security threats across all major components and data flows in the Sprinklr Live Chat platform. The goal is to ensure robust security controls, data isolation, and compliance throughout the system.</p>
+<hr/>
+<h2 id="key-definitions">Key Definitions</h2>
+<ul>
+<li><strong>Trust Boundary:</strong> A point where data or control flows across systems or users with differing levels of trust or administrative control.</li>
+<li><strong>Partner Organization:</strong> An external entity (e.g., bank, retailer) integrating Sprinklr Live Chat into its own applications.</li>
+<li><strong>End User:</strong> An individual who interacts with the partner’s web or mobile application, typically a customer or internal user.</li>
+<li><strong>Sprinklr SaaS:</strong> The centralized cloud platform providing live chat, LLM-powered intelligence, dashboards, and integration services.</li>
+<li><strong>MCP Server:</strong> A partner- or partner-managed backend endpoint supporting personalized data retrieval for LLM agentic flows.</li>
+</ul>
+<hr/>
+<h2 id="high-level-system-architecture">High-Level System Architecture</h2>
 <div class="mermaid">flowchart TD
   subgraph EndUser["End User (Outside Trust Boundary)"]
     EU["End User"]
   end
 
   subgraph PartnerOrg["Partner Organization (Outside Trust Boundary)"]
-    PWA["Partner Web App"]
-    PB["Partner Backend"]
+    CWA["Partner Web App"]
+    CB["Partner Backend"]
   end
 
   subgraph SprinklrSaaS["Sprinklr SaaS (Trust Boundary)"]
@@ -539,112 +630,41 @@
     LLMAPI["OpenAI / Anthropic / etc."]
   end
 
-  EU -- "1 - Login" --&gt; PWA
-  PWA -- "2 - Authenticate" --&gt; PB
-  PWA -- "3 - Request Sprinklr Token" --&gt; SLC
-  SLC -- "4 - Issue Session Token" --&gt; PWA
+  EU -- "1 - Login" --&gt; CWA
+  CWA -- "2 - Authenticate" --&gt; CB
+  CWA -- "3 - Request Sprinklr Token" --&gt; SLC
+  SLC -- "4 - Issue Session Token" --&gt; CWA
   EU -- "5 - Live Chat to Sprinklr with Token" --&gt; SLC
-  SLC -- "6 - S2S or API Call" --&gt; PB
+  SLC -- "6 - S2S or API Call" --&gt; CB
   SLC -- "7 - LLM Query (API Call)" --&gt; LLMAPI
 </div>
 <hr/>
-<h2 id="2-sprinklr-saas-cloud-architecture-data-flows">2. Sprinklr SaaS Cloud Architecture &amp; Data Flows</h2>
-<p>This section details the internal cloud architecture of the Sprinklr SaaS platform as deployed on AWS, and the major data flows between its components. These diagrams help identify cloud-specific attack surfaces, trust boundaries, and the secure delivery path for the SDK.</p>
-<h3 id="21-high-level-aws-system-architecture">2.1 High-Level AWS System Architecture</h3>
-<p>The following diagram shows the main AWS infrastructure components used by Sprinklr SaaS, including load balancers, API gateways, compute clusters, storage, caching, logging, and the use of S3 and CloudFront for secure SDK delivery. WebSocket connections for live chat are supported via the Application Load Balancer (ALB) and routed to the ECS/EKS app services. This view is essential for understanding network segmentation, service isolation, and the entry points for both API and static asset requests.</p>
+<h2 id="trust-boundaries">Trust Boundaries</h2>
+<p>A trust boundary is any point where data or control flows across systems or users with differing levels of trust or administrative control. Each boundary introduces potential risks and must be analyzed for controls and mitigations.</p>
+<h3 id="example-end-user-live-chat-sprinklr">Example: End User → Live Chat (Sprinklr)</h3>
 <div class="mermaid">flowchart TD
-  subgraph Public["Public Internet"]
-    PUB["End User / Partner Web App"]
-    CAU["Partner Admin User"]
-  end
+  EU["End User (Untrusted / Internet)"]
+  SDK["Partner Web/Mobile App (SDK)"]
+  SLC["Sprinklr Live Chat (SaaS)"]
 
-  subgraph VPC["AWS VPC (Sprinklr SaaS Trust Boundary)"]
-    ALB["Application Load Balancer (WebSocket-enabled, Public)"]
-    AGW["API Gateway"]
-    ECS["ECS/EKS (App Services)"]
-    LLM["LLM Context Service"]
-    RDS["RDS/Database"]
-    S3PUB["S3 (Public: Static SPA Assets)"]
-    S3PRIV["S3 (Private: FAQ/Knowledge Data)"]
-    REDIS["Redis/Cache"]
-    LOGS["CloudWatch Logs"]
-    CF["CloudFront CDN"]
-    DASH["Sprinklr Dashboard (SPA)"]
-  end
-
-  subgraph LLMExt["LLM AI Service (External)"]
-    LLMAPI["OpenAI / Anthropic / etc."]
-  end
-
-  %% All users access via ALB
-  PUB -- "HTTPS / WebSocket" --&gt; ALB
-  CAU -- "HTTPS" --&gt; ALB
-
-  %% ALB routes to API Gateway and ECS
-  ALB -- "API / WebSocket" --&gt; AGW
-  ALB -- "API / WebSocket" --&gt; ECS
-
-  %% Dashboard (SPA) is served as static assets via CloudFront
-  CF -- "Serves SPA Static Assets" --&gt; PUB
-  S3PUB -- "Static Assets" --&gt; CF
-
-  %% Dashboard (SPA) API calls go via ALB -&gt; AGW -&gt; ECS
-  AGW -- "Routes API Calls" --&gt; ECS
-  DASH -- "API Calls" --&gt; AGW
-
-  %% ECS/LLM access private S3 for FAQ/Knowledge
-  ECS -- "FAQ/Knowledge Access" --&gt; S3PRIV
-  LLM -- "FAQ/Knowledge Access" --&gt; S3PRIV
-
-  %% ECS/LLM internal flows
-  ECS --&gt; LLM
-  ECS --&gt; RDS
-  ECS --&gt; REDIS
-  ECS --&gt; LOGS
-  LLM --&gt; RDS
-
-  %% LLM Context Service calls external LLM API
-  LLM -- "API Call" --&gt; LLMAPI
-
-  %% Static SDK delivery (if needed)
-  S3PUB -- "SDK Static Files" --&gt; CF
-
-  %% Dashboard login/integration management via ALB
-  ALB -- "Dashboard HTTPS" --&gt; DASH
+  EU -- "Chat/Message" --&gt; SDK
+  SDK -- "API/WebSocket" --&gt; SLC
 </div>
 <hr/>
-<h3 id="22-data-flow-diagram-dfd">2.2 Data Flow Diagram (DFD)</h3>
-<p>This diagram illustrates the flow of data between the main actors and services in the Sprinklr SaaS platform, including user authentication, chat session management, LLM context queries, S2S/API calls, and the secure delivery of the SDK via CloudFront and S3. It highlights the key integration points and the movement of sensitive data across trust boundaries.</p>
-<div class="mermaid">flowchart TD
-  EU["End User"]
-  CWA["Client Web App"]
-  AGW["API Gateway"]
-  ECS["App Services"]
-  LLM["LLM Context Service"]
-  RDS["Database"]
-  S3["S3 Storage &amp; SDK"]
-  CF["CloudFront CDN"]
-  PB["Partner Backend"]
-
-  EU -- "Login/Chat" --&gt; PWA
-  PWA -- "API Request" --&gt; AGW
-  AGW -- "Routes" --&gt; ECS
-  ECS -- "Session/Chat Data" --&gt; RDS
-  ECS -- "Knowledge/Files" --&gt; S3
-  ECS -- "LLM Query" --&gt; LLM
-  LLM -- "Context/Data" --&gt; RDS
-  LLM -- "Knowledge" --&gt; S3
-  ECS -- "S2S/API Call" --&gt; PB
-  PWA -- "SDK Request" --&gt; CF
-  CF -- "Serves SDK" --&gt; PWA
-  CF -- "Fetches from" --&gt; S3
-</div>
+<h2 id="threat-modeling-scope">Threat Modeling Scope</h2>
+<ul>
+<li>All Sprinklr-operated services and infrastructure are considered within the trust boundary.</li>
+<li>All other entities—including end users, partner organizations, partner web apps, and partner backends—are considered outside the trust boundary.</li>
+<li>The model assumes a zero-trust approach for all interactions crossing into Sprinklr from external users, systems, or services.</li>
+</ul>
 <hr/>
-<h2 id="3-data-flow-diagrams">3. Data Flow Diagrams</h2>
-<p>(See attached diagrams for each group and component)</p>
-<hr/>
-<h2 id="summary">Summary</h2>
-<p>This architecture document provides a detailed view of the Sprinklr Live Chat platform's cloud infrastructure, data flows, and integration points. It is intended to support further analysis in threat modeling and secure architecture.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>See <a href="../component_threat_analysis/">Component-Level Threat Analysis</a> for detailed per-component threats and mitigations.</li>
+<li>See <a href="../stride_mapping/">STRIDE Threat Mapping</a> for threat category mapping.</li>
+<li>See <a href="../data_compliance/">Data Storage &amp; Compliance</a> for compliance and retention details.</li>
+<li>See <a href="../availability_recovery/">Service Availability &amp; Recovery</a> for operational resilience.</li>
+</ul>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

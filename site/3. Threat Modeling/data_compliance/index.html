@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://sprinklr-threat-model.meddler.io/integration/troubleshooting/">
+        <link rel="canonical" href="https://sprinklr-threat-model.meddler.io/3.%20Threat%20Modeling/data_compliance/">
       
       
-        <link rel="prev" href="../mobile_integration/">
+        <link rel="prev" href="../stride_mapping/">
       
       
-        <link rel="next" href="../../1.%20System%20Design/system_design/">
+        <link rel="next" href="../availability_recovery/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Troubleshooting & FAQ - Sprinklr Live Chat SDK</title>
+        <title>Data Storage & Compliance - Sprinklr Live Chat SDK</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#troubleshooting-faq" class="md-skip">
+        <a href="#data-storage-compliance-considerations" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Troubleshooting & FAQ
+              Data Storage & Compliance
             
           </span>
         </div>
@@ -215,20 +215,20 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -244,7 +244,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             SDK Integration
@@ -258,7 +258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+      <a href="../../integration/overview/" class="md-nav__link">
         
   
   
@@ -281,7 +281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sdk_usage/" class="md-nav__link">
+      <a href="../../integration/sdk_usage/" class="md-nav__link">
         
   
   
@@ -304,7 +304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web_integration/" class="md-nav__link">
+      <a href="../../integration/web_integration/" class="md-nav__link">
         
   
   
@@ -327,7 +327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mobile_integration/" class="md-nav__link">
+      <a href="../../integration/mobile_integration/" class="md-nav__link">
         
   
   
@@ -347,32 +347,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Troubleshooting & FAQ
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../integration/troubleshooting/" class="md-nav__link">
         
   
   
@@ -383,104 +361,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#common-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Issues
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Common Issues">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-sdk-fails-to-connect" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. SDK Fails to Connect
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-authentication-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Authentication Errors
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-messages-not-received" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Messages Not Received
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-ui-not-updating" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. UI Not Updating
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-cors-or-https-errors-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. CORS or HTTPS Errors (Web)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#debugging-tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      Debugging Tips
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
-    <span class="md-ellipsis">
-      Support
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -659,20 +539,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -688,7 +568,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Threat Modeling
@@ -702,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.%20Threat%20Modeling/threat_modeling_overview/" class="md-nav__link">
+      <a href="../threat_modeling_overview/" class="md-nav__link">
         
   
   
@@ -791,20 +671,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
         
           
           <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
@@ -820,7 +700,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
             Application Architecture Review
@@ -834,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.%20Threat%20Modeling/component_threat_analysis/" class="md-nav__link">
+      <a href="../component_threat_analysis/" class="md-nav__link">
         
   
   
@@ -857,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.%20Threat%20Modeling/stride_mapping/" class="md-nav__link">
+      <a href="../stride_mapping/" class="md-nav__link">
         
   
   
@@ -877,10 +757,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../3.%20Threat%20Modeling/data_compliance/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Data Storage & Compliance
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -891,6 +793,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Inventory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compliance-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compliance Matrix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-risks-mitigations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Risks &amp; Mitigations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-compliance-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open Compliance Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -903,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.%20Threat%20Modeling/availability_recovery/" class="md-nav__link">
+      <a href="../availability_recovery/" class="md-nav__link">
         
   
   
@@ -1329,78 +1287,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#common-issues" class="md-nav__link">
+  <a href="#data-inventory" class="md-nav__link">
     <span class="md-ellipsis">
-      Common Issues
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Common Issues">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-sdk-fails-to-connect" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. SDK Fails to Connect
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-authentication-errors" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Authentication Errors
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-messages-not-received" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Messages Not Received
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-ui-not-updating" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. UI Not Updating
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-cors-or-https-errors-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. CORS or HTTPS Errors (Web)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#debugging-tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      Debugging Tips
+      Data Inventory
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
+  <a href="#compliance-matrix" class="md-nav__link">
     <span class="md-ellipsis">
-      Support
+      Compliance Matrix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-risks-mitigations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Risks &amp; Mitigations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-compliance-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open Compliance Questions
     </span>
   </a>
   
@@ -1422,46 +1338,179 @@
 
 
 
-<h1 id="troubleshooting-faq">Troubleshooting &amp; FAQ</h1>
-<p>This section provides solutions to common issues encountered during the integration of the Sprinklr Live Chat SDK, as well as frequently asked questions.</p>
-<h2 id="common-issues">Common Issues</h2>
-<h3 id="1-sdk-fails-to-connect">1. SDK Fails to Connect</h3>
+<h1 id="data-storage-compliance-considerations">Data Storage &amp; Compliance Considerations</h1>
+<p>This section details the data storage locations, compliance requirements, retention policies, and key risks and mitigations for the Sprinklr Live Chat system.</p>
+<hr />
+<h2 id="data-inventory">Data Inventory</h2>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Stored In</th>
+<th>Trust Boundary</th>
+<th>Compliance Req.</th>
+<th>Retention Policy</th>
+<th>Encryption</th>
+<th>Deletion/Access</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat Logs</td>
+<td>Sprinklr DB</td>
+<td>Internal (Trusted)</td>
+<td>GDPR, CCPA, Audit</td>
+<td>90 days (default)</td>
+<td>Yes</td>
+<td>On request</td>
+</tr>
+<tr>
+<td>User Profiles</td>
+<td>Partner Backend</td>
+<td>External (Partner)</td>
+<td>Partner's responsibility</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Uploaded FAQ/Knowledge</td>
+<td>LLM Context Store</td>
+<td>Internal (Trusted)</td>
+<td>GDPR, CCPA</td>
+<td>Until deleted</td>
+<td>Yes</td>
+<td>On request</td>
+</tr>
+<tr>
+<td>Session Tokens</td>
+<td>Browser/Sprinklr Auth</td>
+<td>Mixed</td>
+<td>Secure storage, expiry</td>
+<td>Short-lived</td>
+<td>Yes</td>
+<td>Auto-expiry</td>
+</tr>
+<tr>
+<td>API Keys/Secrets</td>
+<td>Sprinklr Vault/Partner</td>
+<td>Mixed</td>
+<td>Secure storage, rotation</td>
+<td>Until rotated</td>
+<td>Yes</td>
+<td>On rotation</td>
+</tr>
+<tr>
+<td>Audit Logs</td>
+<td>Sprinklr Logging</td>
+<td>Internal (Trusted)</td>
+<td>Audit, GDPR</td>
+<td>1 year</td>
+<td>Yes</td>
+<td>On request</td>
+</tr>
+<tr>
+<td>User Data Fetched via S2S/LLM Agent</td>
+<td>Sprinklr Memory/Cache (Ephemeral)</td>
+<td>Internal (Trusted)</td>
+<td>GDPR, CCPA, Purpose Limitation</td>
+<td>Ephemeral (request scope only)</td>
+<td>Yes (in transit &amp; at rest)</td>
+<td>Deleted after use (no persistent storage)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="compliance-matrix">Compliance Matrix</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>GDPR</th>
+<th>CCPA</th>
+<th>Data Residency</th>
+<th>Retention</th>
+<th>Deletion</th>
+<th>Auditability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sprinklr Live Chat Service</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔ (config)</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>LLM Context Service</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔ (config)</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Sprinklr Dashboard</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Integration Backend</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Partner Backend</td>
+<td>✖</td>
+<td>✖</td>
+<td>Partner</td>
+<td>Partner</td>
+<td>Partner</td>
+<td>Partner</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="key-risks-mitigations">Key Risks &amp; Mitigations</h2>
 <ul>
-<li><strong>Check network connectivity and firewall settings.</strong></li>
-<li><strong>Verify orgId and apiKey are correct.</strong></li>
-<li><strong>Ensure the environment (production/staging) is set properly.</strong></li>
-<li><strong>Check for typos in initialization code.</strong></li>
+<li><strong>Supply Chain &amp; SDK Delivery Attacks:</strong></li>
+<li>Mitigation: Signed SDK delivery, SRI enforcement, strict domain whitelisting, secure HTTPS-only distribution, regular dependency audits, and rapid response to discovered vulnerabilities. Harden CSP and CORS policies to prevent unauthorized resource loading and cross-origin attacks.</li>
+<li><strong>Unauthorized Data Access:</strong>  </li>
+<li>Mitigation: Encryption at rest, strict access controls, audit logging.</li>
+<li><strong>Improper Data Retention/Deletion:</strong>  </li>
+<li>Mitigation: Automated retention policies, user-initiated deletion, compliance reviews.</li>
+<li><strong>Cross-Border Data Transfer:</strong>  </li>
+<li>Mitigation: Data residency controls, region-aware storage, contractual safeguards.</li>
+<li><strong>Lack of User Consent:</strong>  </li>
+<li>Mitigation: Consent management in partner apps, clear privacy policies.</li>
+<li><strong>Data Leakage via LLM/Agentic Flows or S2S Fetched Data:</strong>  </li>
+<li>Mitigation: Output filtering, data minimization, ephemeral storage, strict purpose limitation, and immediate deletion after use. Ensure no persistent logging of sensitive user data fetched from partner backends.</li>
+<li><strong>Cryptographic Isolation Failure (Key/Cert Leakage):</strong></li>
+<li>Mitigation: Per-tenant key management, strict logical and physical separation of keys/certs, automated rotation, and monitoring. Compromise of one partner's keys or mTLS certificates must not impact other tenants. Use hardware security modules (HSMs) or secure enclaves for key storage where possible.</li>
 </ul>
-<h3 id="2-authentication-errors">2. Authentication Errors</h3>
+<hr />
+<h2 id="open-compliance-questions">Open Compliance Questions</h2>
 <ul>
-<li><strong>Ensure the session token is valid and not expired.</strong></li>
-<li><strong>Confirm the backend is issuing tokens correctly.</strong></li>
-<li><strong>Check time synchronization between client and server.</strong></li>
+<li>Are all data flows and storage locations documented and reviewed for compliance?</li>
+<li>How is user consent for data processing and storage obtained and tracked?</li>
+<li>Are data residency requirements configurable per partner/tenant?</li>
+<li>What is the process for fulfilling data subject access/deletion requests (DSARs)?</li>
+<li>How are compliance controls tested and audited?</li>
+<li>How is user data fetched via S2S/LLM Agentic flows handled, logged, and deleted? Is there any risk of inadvertent persistence or logging of sensitive data? Are ephemeral storage and deletion controls auditable?</li>
+<li>How is cryptographic isolation enforced between tenants? What is the process for detecting, containing, and remediating a key or certificate compromise for a single partner, and how is blast radius minimized?</li>
 </ul>
-<h3 id="3-messages-not-received">3. Messages Not Received</h3>
-<ul>
-<li><strong>Verify the chat is connected before sending/receiving messages.</strong></li>
-<li><strong>Check event handler registration (onMessage, on).</strong></li>
-<li><strong>Inspect browser or device console/logs for errors.</strong></li>
-</ul>
-<h3 id="4-ui-not-updating">4. UI Not Updating</h3>
-<ul>
-<li><strong>Ensure your chat UI is listening for SDK events.</strong></li>
-<li><strong>Debug with sample data to isolate UI issues from SDK issues.</strong></li>
-</ul>
-<h3 id="5-cors-or-https-errors-web">5. CORS or HTTPS Errors (Web)</h3>
-<ul>
-<li><strong>Use HTTPS for all endpoints.</strong></li>
-<li><strong>Check CORS headers on your backend and Sprinklr endpoints.</strong></li>
-</ul>
-<h2 id="debugging-tips">Debugging Tips</h2>
-<ul>
-<li>Enable verbose logging in the SDK if available.</li>
-<li>Use browser dev tools or mobile device logs to inspect network requests.</li>
-<li>Test with sample credentials and a minimal app to isolate issues.</li>
-</ul>
-<h2 id="support">Support</h2>
-<p>If issues persist, contact Sprinklr support with logs, error messages, and integration details.</p>
 
 
 
