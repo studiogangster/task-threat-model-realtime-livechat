@@ -52,24 +52,6 @@ flowchart TD
 
 ---
 
-## Trust Boundaries
-
-A trust boundary is any point where data or control flows across systems or users with differing levels of trust or administrative control. Each boundary introduces potential risks and must be analyzed for controls and mitigations.
-
-### Example: End User → Live Chat (Sprinklr)
-
-```mermaid
-flowchart TD
-  EU["End User (Untrusted / Internet)"]
-  SDK["Partner Web/Mobile App (SDK)"]
-  SLC["Sprinklr Live Chat (SaaS)"]
-
-  EU -- "Chat/Message" --> SDK
-  SDK -- "API/WebSocket" --> SLC
-```
-
----
-
 ## Threat Modeling Scope
 
 - All Sprinklr-operated services and infrastructure are considered within the trust boundary.

@@ -31,9 +31,9 @@ nav:
 
 
   - Threat Modeling:
-      - Overview: '3. Threat Modeling/threat_modeling_overview.md'
+      # - Overview: '3. Threat Modeling/threat_modeling_overview.md'
 
-    #   - Overview: '2. Secure Architecture/overview.md'
+      - Overview: '2. Secure Architecture/overview.md'
       - Trust Boundaries: '2. Secure Architecture/trust_boundary.md'
       - Data Flows: '2. Secure Architecture/data_flows.md'
       - Cloud Architecture Review: '2. Secure Architecture/cloud_architecture.md'
@@ -45,10 +45,13 @@ nav:
       # - Incident Response: '2. Secure Architecture/incident_response.md'
 
       - Application Architecture Review :
+        - Overview: '3. Threat Modeling/threat_modeling_overview.md'
+
         - Component-Level Threat Analysis: '3. Threat Modeling/component_threat_analysis.md'
         - STRIDE Threat Mapping: '3. Threat Modeling/stride_mapping.md'
         - Data Storage & Compliance: '3. Threat Modeling/data_compliance.md'
         - Service Availability & Recovery: '3. Threat Modeling/availability_recovery.md'
+        # - Service Availability & Recovery: '3. Threat Modeling/threat_modeling_overview.md'
 
       
   - Security Design Q&A Session:
