@@ -30,13 +30,6 @@ nav:
       - Deployment: '1. System Design/deployment.md'
 
 
-  - Threat Modeling:
-      # - Overview: '3. Threat Modeling/threat_modeling_overview.md'
-
-      - Overview: '2. Secure Architecture/overview.md'
-      - Trust Boundaries: '2. Secure Architecture/trust_boundary.md'
-      - Data Flows: '2. Secure Architecture/data_flows.md'
-      - Cloud Architecture Review: '2. Secure Architecture/cloud_architecture.md'
     #   - Architecture (Legacy): '2. Secure Architecture/architecture.md'
     #   - Threat Model (Application): '../threat-model/threat_model.md'
     #   - Threat Model (Cloud): '../threat-model/threat_model_cloud.md'
@@ -44,16 +37,23 @@ nav:
       # Uncomment or add below if incident response doc is created
       # - Incident Response: '2. Secure Architecture/incident_response.md'
 
-      - Application Architecture Review :
-        - Overview: '3. Threat Modeling/threat_modeling_overview.md'
+  - Threat Modeling (Application):
+    - Overview: '3. Threat Modeling/threat_modeling_overview.md'
+    - Trust Boundaries: '2. Secure Architecture/trust_boundary.md'
+    - Data Flows: '2. Secure Architecture/data_flows.md'
+    - Component-Level Threat Analysis: '3. Threat Modeling/component_threat_analysis.md'
+    - STRIDE Threat Mapping: '3. Threat Modeling/stride_mapping.md'
+    - Data Storage & Compliance: '3. Threat Modeling/data_compliance.md'
+    - Service Availability & Recovery: '3. Threat Modeling/availability_recovery.md'
+    # - Service Availability & Recovery: '3. Threat Modeling/threat_modeling_overview.md'
 
-        - Component-Level Threat Analysis: '3. Threat Modeling/component_threat_analysis.md'
-        - STRIDE Threat Mapping: '3. Threat Modeling/stride_mapping.md'
-        - Data Storage & Compliance: '3. Threat Modeling/data_compliance.md'
-        - Service Availability & Recovery: '3. Threat Modeling/availability_recovery.md'
-        # - Service Availability & Recovery: '3. Threat Modeling/threat_modeling_overview.md'
+  - Threat Modeling (Cloud):
+      # - Overview: '3. Threat Modeling/threat_modeling_overview.md'
 
-      
+      - Overview: '2. Secure Architecture/overview.md'
+      - Cloud Architecture Review: '2. Secure Architecture/cloud_architecture.md'
+
+
   - Security Design Q&A Session:
       - Authentication for API and WebSocket: 'threat_modeling_interviews/authentication_api_websocket.md'
       - Secure Communication Between Partner and Sprinklr: 'threat_modeling_interviews/secure_comm_partner_sprinklr.md'
@@ -70,4 +70,6 @@ nav:
       - Isolating End User Context in LLM Responses: 'threat_modeling_interviews/llm_context_isolation.md'
  
  
+  - Summary: 'threat_modeling_report.md'
   - Glossary: 'glossary.md'
+
