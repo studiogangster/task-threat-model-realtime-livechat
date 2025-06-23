@@ -51,7 +51,9 @@ nav:
       # - Overview: '3. Threat Modeling/threat_modeling_overview.md'
 
       - Overview: '2. Secure Architecture/overview.md'
-      - Cloud Architecture Review: '2. Secure Architecture/cloud_architecture.md'
+      - Components & Data-flow: '2. Secure Architecture/cloud_architecture.md'
+      - STRIDE Threat Mapping: '2. Secure Architecture/threat_model_cloud.md'
+
 
 
   - Security Design Q&A Session:

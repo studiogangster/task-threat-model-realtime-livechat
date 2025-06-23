@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://sprinklr-threat-model.meddler.io/3.%20Threat%20Modeling/threat_modeling_overview/" rel="canonical"/>
-<link href="../../1.%20System%20Design/deployment/" rel="prev"/>
-<link href="../../2.%20Secure%20Architecture/trust_boundary/" rel="next"/>
+<link href="https://sprinklr-threat-model.meddler.io/2.%20Secure%20Architecture/threat_model_cloud/" rel="canonical"/>
+<link href="../cloud_architecture/" rel="prev"/>
+<link href="../../threat_modeling_interviews/authentication_api_websocket/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.14" name="generator"/>
-<title>Overview - Sprinklr Live Chat SDK</title>
+<title>STRIDE Threat Mapping - Sprinklr Live Chat SDK</title>
 <link href="../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#threat-modeling-overview">
+<a class="md-skip" href="#threat-model-cloud-system-design-sprinklr-live-chat">
           Skip to content
         </a>
 </div>
@@ -46,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Overview
+              STRIDE Threat Mapping
             
           </span>
 </div>
@@ -223,8 +223,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
 <span class="md-ellipsis">
     Threat Modeling (Application)
@@ -232,24 +232,114 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
             Threat Modeling (Application)
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3.%20Threat%20Modeling/threat_modeling_overview/">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../trust_boundary/">
+<span class="md-ellipsis">
+    Trust Boundaries
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../data_flows/">
+<span class="md-ellipsis">
+    Data Flows
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3.%20Threat%20Modeling/component_threat_analysis/">
+<span class="md-ellipsis">
+    Component-Level Threat Analysis
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3.%20Threat%20Modeling/stride_mapping/">
+<span class="md-ellipsis">
+    STRIDE Threat Mapping
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3.%20Threat%20Modeling/data_compliance/">
+<span class="md-ellipsis">
+    Data Storage &amp; Compliance
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../3.%20Threat%20Modeling/availability_recovery/">
+<span class="md-ellipsis">
+    Service Availability &amp; Recovery
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Threat Modeling (Cloud)
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Threat Modeling (Cloud)
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../overview/">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cloud_architecture/">
+<span class="md-ellipsis">
+    Components &amp; Data-flow
+    
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Overview
+    STRIDE Threat Mapping
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Overview
+    STRIDE Threat Mapping
     
   </span>
 </a>
@@ -260,132 +350,56 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#purpose">
+<a class="md-nav__link" href="#scope">
 <span class="md-ellipsis">
-      Purpose
+      Scope
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#key-definitions">
+<a class="md-nav__link" href="#cloud-trust-boundaries">
 <span class="md-ellipsis">
-      Key Definitions
+      Cloud Trust Boundaries
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#high-level-system-architecture">
+<a class="md-nav__link" href="#high-level-design">
 <span class="md-ellipsis">
-      High-Level System Architecture
+      High-level Design
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#threat-modeling-scope">
+<a class="md-nav__link" href="#stride-threat-mapping-cloud-components">
 <span class="md-ellipsis">
-      Threat Modeling Scope
+      STRIDE Threat Mapping: Cloud Components
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#references">
+<a class="md-nav__link" href="#key-cloud-risks-mitigations">
 <span class="md-ellipsis">
-      References
+      Key Cloud Risks &amp; Mitigations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cloud-specific-incident-response">
+<span class="md-ellipsis">
+      Cloud-Specific Incident Response
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      Summary
     </span>
 </a>
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../2.%20Secure%20Architecture/trust_boundary/">
-<span class="md-ellipsis">
-    Trust Boundaries
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../2.%20Secure%20Architecture/data_flows/">
-<span class="md-ellipsis">
-    Data Flows
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../component_threat_analysis/">
-<span class="md-ellipsis">
-    Component-Level Threat Analysis
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../stride_mapping/">
-<span class="md-ellipsis">
-    STRIDE Threat Mapping
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../data_compliance/">
-<span class="md-ellipsis">
-    Data Storage &amp; Compliance
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../availability_recovery/">
-<span class="md-ellipsis">
-    Service Availability &amp; Recovery
-    
-  </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-<span class="md-ellipsis">
-    Threat Modeling (Cloud)
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
-            Threat Modeling (Cloud)
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../2.%20Secure%20Architecture/overview/">
-<span class="md-ellipsis">
-    Overview
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../2.%20Secure%20Architecture/cloud_architecture/">
-<span class="md-ellipsis">
-    Components &amp; Data-flow
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../2.%20Secure%20Architecture/threat_model_cloud/">
-<span class="md-ellipsis">
-    STRIDE Threat Mapping
-    
-  </span>
-</a>
 </li>
 </ul>
 </nav>
@@ -543,37 +557,51 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#purpose">
+<a class="md-nav__link" href="#scope">
 <span class="md-ellipsis">
-      Purpose
+      Scope
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#key-definitions">
+<a class="md-nav__link" href="#cloud-trust-boundaries">
 <span class="md-ellipsis">
-      Key Definitions
+      Cloud Trust Boundaries
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#high-level-system-architecture">
+<a class="md-nav__link" href="#high-level-design">
 <span class="md-ellipsis">
-      High-Level System Architecture
+      High-level Design
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#threat-modeling-scope">
+<a class="md-nav__link" href="#stride-threat-mapping-cloud-components">
 <span class="md-ellipsis">
-      Threat Modeling Scope
+      STRIDE Threat Mapping: Cloud Components
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#references">
+<a class="md-nav__link" href="#key-cloud-risks-mitigations">
 <span class="md-ellipsis">
-      References
+      Key Cloud Risks &amp; Mitigations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cloud-specific-incident-response">
+<span class="md-ellipsis">
+      Cloud-Specific Incident Response
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      Summary
     </span>
 </a>
 </li>
@@ -584,63 +612,257 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="threat-modeling-overview">Threat Modeling Overview</h1>
-<p>This section provides a summary of the threat modeling approach, key definitions, and high-level architecture and trust boundary diagrams for the Sprinklr Live Chat system.</p>
+<h1 id="threat-model-cloud-system-design-sprinklr-live-chat">Threat Model: Cloud System Design (Sprinklr Live Chat)</h1>
+<h2 id="scope">Scope</h2>
+<p>This document presents the threat model for the cloud infrastructure supporting Sprinklr Live Chat. It focuses on the AWS-based architecture, network boundaries, storage, APIs, and cloud-native services, identifying key threats and mitigations specific to the cloud environment. Application-level threats are covered in a separate document.</p>
 <hr/>
-<h2 id="purpose">Purpose</h2>
-<p>The threat modeling process systematically identifies, analyzes, and mitigates security threats across all major components and data flows in the Sprinklr Live Chat platform. The goal is to ensure robust security controls, data isolation, and compliance throughout the system.</p>
-<hr/>
-<h2 id="key-definitions">Key Definitions</h2>
+<h2 id="cloud-trust-boundaries">Cloud Trust Boundaries</h2>
 <ul>
-<li><strong>Trust Boundary:</strong> A point where data or control flows across systems or users with differing levels of trust or administrative control.</li>
-<li><strong>Partner Organization:</strong> An external entity (e.g., bank, retailer) integrating Sprinklr Live Chat into its own applications.</li>
-<li><strong>End User:</strong> An individual who interacts with the partner’s web or mobile application, typically a customer or internal user.</li>
-<li><strong>Sprinklr SaaS:</strong> The centralized cloud platform providing live chat, LLM-powered intelligence, dashboards, and integration services.</li>
-<li><strong>MCP Server:</strong> A partner- or partner-managed backend endpoint supporting personalized data retrieval for LLM agentic flows.</li>
+<li><strong>Public Internet → AWS VPC:</strong> Entry point for all user and partner traffic; exposed via Elastic Load Balancers (ELB), API Gateways, and CloudFront. The same gateway is used for public access by end users, partner services (S2S/API), and partner admins accessing the Sprinklr integration dashboard.</li>
+<li><strong>Partner Organization → Sprinklr SaaS Cloud:</strong> S2S/API calls from partner backends to Sprinklr cloud endpoints, secured with mutual TLS (mTLS) authentication to ensure only authorized partners can communicate with Sprinklr Cloud backend.</li>
+<li><strong>Sprinklr SaaS Internal Segmentation:</strong> Isolation between microservices, databases, storage, and LLM context services within the VPC.</li>
+<li><strong>Sprinklr SaaS → External LLM APIs:</strong> Outbound calls to third-party LLM providers (e.g., OpenAI, Anthropic).</li>
+<li><strong>Admin Access → Cloud Management Plane:</strong> Access by Sprinklr engineers to AWS console, infrastructure as code, and CI/CD pipelines.</li>
+<li><strong>Multi-Region Deployment:</strong> Sprinklr Live Chat is deployed across multiple AWS regions to ensure high availability, performance, and system uptime for all tenants.</li>
 </ul>
 <hr/>
-<h2 id="high-level-system-architecture">High-Level System Architecture</h2>
+<h2 id="high-level-design">High-level Design</h2>
 <div class="mermaid">flowchart TD
-  subgraph EndUser["End User (Outside Trust Boundary)"]
-    EU["End User"]
+  subgraph Public["Public Internet"]
+    PUB["End User / Client Web App"]
+    CAU["Client Admin User"]
   end
 
-  subgraph PartnerOrg["Partner Organization (Outside Trust Boundary)"]
-    CWA["Partner Web App"]
-    CB["Partner Backend"]
-  end
-
-  subgraph SprinklrSaaS["Sprinklr SaaS (Trust Boundary)"]
-    SLC["Sprinklr SaaS"]
+  subgraph VPC["AWS VPC (Sprinklr SaaS Trust Boundary)"]
+    ALB["Application Load Balancer (WebSocket-enabled, Public)"]
+    AGW["API Gateway"]
+    ECS["ECS/EKS (App Services)"]
+    LLM["LLM Context Service"]
+    RDS["RDS/Database"]
+    S3PUB["S3 (Public: Static SPA Assets)"]
+    S3PRIV["S3 (Private: FAQ/Knowledge Data)"]
+    REDIS["Redis/Cache"]
+    LOGS["CloudWatch Logs"]
+    CF["CloudFront CDN"]
+    DASH["Sprinklr Dashboard (SPA)"]
   end
 
   subgraph LLMExt["LLM AI Service (External)"]
     LLMAPI["OpenAI / Anthropic / etc."]
   end
 
-  EU -- "1 - Login" --&gt; CWA
-  CWA -- "2 - Authenticate" --&gt; CB
-  CWA -- "3 - Request Sprinklr Token" --&gt; SLC
-  SLC -- "4 - Issue Session Token" --&gt; CWA
-  EU -- "5 - Live Chat to Sprinklr with Token" --&gt; SLC
-  SLC -- "6 - S2S or API Call" --&gt; CB
-  SLC -- "7 - LLM Query (API Call)" --&gt; LLMAPI
+  %% All users access via ALB
+  PUB -- "HTTPS / WebSocket" --&gt; ALB
+  CAU -- "HTTPS" --&gt; ALB
+
+  %% ALB routes to API Gateway and ECS
+  ALB -- "API / WebSocket" --&gt; AGW
+  ALB -- "API / WebSocket" --&gt; ECS
+
+  %% Dashboard (SPA) is served as static assets via CloudFront
+  CF -- "Serves SPA Static Assets" --&gt; PUB
+  S3PUB -- "Static Assets" --&gt; CF
+
+  %% Dashboard (SPA) API calls go via ALB -&gt; AGW -&gt; ECS
+  AGW -- "Routes API Calls" --&gt; ECS
+  DASH -- "API Calls" --&gt; AGW
+
+  %% ECS/LLM access private S3 for FAQ/Knowledge
+  ECS -- "FAQ/Knowledge Access" --&gt; S3PRIV
+  LLM -- "FAQ/Knowledge Access" --&gt; S3PRIV
+
+  %% ECS/LLM internal flows
+  ECS --&gt; LLM
+  ECS --&gt; RDS
+  ECS --&gt; REDIS
+  ECS --&gt; LOGS
+  LLM --&gt; RDS
+
+  %% LLM Context Service calls external LLM API
+  LLM -- "API Call" --&gt; LLMAPI
+
+  %% Static SDK delivery (if needed)
+  S3PUB -- "SDK Static Files" --&gt; CF
+
+  %% Dashboard login/integration management via ALB
+  ALB -- "Dashboard HTTPS" --&gt; DASH
 </div>
 <hr/>
-<h2 id="threat-modeling-scope">Threat Modeling Scope</h2>
+<h2 id="stride-threat-mapping-cloud-components">STRIDE Threat Mapping: Cloud Components</h2>
+<table>
+<thead>
+<tr>
+<th>Cloud Component</th>
+<th>S</th>
+<th>T</th>
+<th>R</th>
+<th>I</th>
+<th>D</th>
+<th>E</th>
+<th>Key Mitigations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Application Load Balancer</td>
+<td>✔</td>
+<td>✔</td>
+<td></td>
+<td>✔</td>
+<td>✔</td>
+<td></td>
+<td>TLS, WAF, DDoS protection, strict routing, logging, multi-region, auto-scaling</td>
+</tr>
+<tr>
+<td>API Gateway</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>AuthN/Z, input validation, rate limiting, audit logs, single entry point for all public/partner/admin access</td>
+</tr>
+<tr>
+<td>ECS/EKS (App Services)</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>Network segmentation, IAM roles, container hardening, logging, multi-tenancy isolation</td>
+</tr>
+<tr>
+<td>RDS/Database</td>
+<td>✔</td>
+<td>✔</td>
+<td></td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>Encryption at rest, VPC-only access, IAM, audit logs</td>
+</tr>
+<tr>
+<td>S3 (Public/Private)</td>
+<td>✔</td>
+<td>✔</td>
+<td></td>
+<td>✔</td>
+<td>✔</td>
+<td></td>
+<td>Bucket policies, encryption, S3 Block Public Access, versioning</td>
+</tr>
+<tr>
+<td>CloudFront CDN</td>
+<td>✔</td>
+<td>✔</td>
+<td></td>
+<td>✔</td>
+<td>✔</td>
+<td></td>
+<td>Signed URLs, HTTPS-only, origin restrictions, logging</td>
+</tr>
+<tr>
+<td>LLM Context Service</td>
+<td>✔</td>
+<td>✔</td>
+<td></td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>IAM, input validation, output filtering, least privilege</td>
+</tr>
+<tr>
+<td>Cloud IAM &amp; Management</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>MFA, least privilege, audit logs, change management</td>
+</tr>
+<tr>
+<td>VPC Networking</td>
+<td>✔</td>
+<td>✔</td>
+<td></td>
+<td>✔</td>
+<td>✔</td>
+<td></td>
+<td>Security groups, NACLs, private subnets, flow logs</td>
+</tr>
+<tr>
+<td>CI/CD Pipeline</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>Pipeline isolation, secrets management, code review, audit logs</td>
+</tr>
+</tbody>
+</table>
+<p>Legend:<br/>
+S = Spoofing, T = Tampering, R = Repudiation, I = Information Disclosure, D = Denial of Service, E = Elevation of Privilege</p>
+<hr/>
+<h2 id="key-cloud-risks-mitigations">Key Cloud Risks &amp; Mitigations</h2>
 <ul>
-<li>All Sprinklr-operated services and infrastructure are considered within the trust boundary.</li>
-<li>All other entities—including end users, partner organizations, partner web apps, and partner backends—are considered outside the trust boundary.</li>
-<li>The model assumes a zero-trust approach for all interactions crossing into Sprinklr from external users, systems, or services.</li>
+<li><strong>Public Exposure of Services:</strong> </li>
+<li>Mitigation: Restrict public endpoints, use WAF, enforce HTTPS, monitor for open ports. Use a single, well-audited gateway (API Gateway/ELB) for all public, partner, and admin access to reduce attack surface.</li>
+<li><strong>Misconfigured IAM Roles/Policies:</strong> </li>
+<li>Mitigation: Principle of least privilege, regular IAM audits, automated policy checks.</li>
+<li><strong>Data Leakage from S3 or RDS:</strong> </li>
+<li>Mitigation: S3 Block Public Access, encryption, VPC-only access, audit logs.</li>
+<li><strong>Lateral Movement within VPC:</strong> </li>
+<li>
+<p>Mitigation: Micro-segmentation, security groups, NACLs, service-to-service auth. Enforce mTLS for all S2S/API communication between partner backends and Sprinklr Cloud backend.</p>
+</li>
+<li>
+<p><strong>Certificate, Key, and Secret Management:</strong> </p>
+</li>
+<li>
+<p>Mitigation: </p>
+<ul>
+<li>Use a centralized secrets management solution (e.g., AWS Secrets Manager, HashiCorp Vault) for all mTLS certificates, API keys, and sensitive configs.</li>
+<li>Enforce automated certificate/key rotation and expiration policies.</li>
+<li>Monitor vault access and changes with audit logging and alerting.</li>
+<li>Encrypt secrets at rest and in transit.</li>
+<li>Restrict vault access to least-privilege roles and require MFA for sensitive operations.</li>
+<li>Regularly review and test incident response for key/certificate compromise.</li>
+</ul>
+</li>
+<li>
+<p><strong>Compromised CI/CD Pipeline:</strong> </p>
+</li>
+<li>Mitigation: Secrets management, pipeline isolation, code review, audit logging.</li>
+<li><strong>Abuse of Cloud Management Plane:</strong> </li>
+<li>Mitigation: MFA, role-based access, change management, monitoring.</li>
+<li><strong>DDoS Attacks:</strong> </li>
+<li>Mitigation: AWS Shield, rate limiting, auto-scaling, WAF. ELB and multi-region deployment ensure scalability and service continuity in a multi-tenant SaaS environment.</li>
+<li><strong>Supply Chain Attacks (Dependencies, Images):</strong> </li>
+<li>Mitigation: Signed images, dependency scanning, SRI, version pinning.</li>
 </ul>
 <hr/>
-<h2 id="references">References</h2>
+<h2 id="cloud-specific-incident-response">Cloud-Specific Incident Response</h2>
 <ul>
-<li>See <a href="../component_threat_analysis/">Component-Level Threat Analysis</a> for detailed per-component threats and mitigations.</li>
-<li>See <a href="../stride_mapping/">STRIDE Threat Mapping</a> for threat category mapping.</li>
-<li>See <a href="../data_compliance/">Data Storage &amp; Compliance</a> for compliance and retention details.</li>
-<li>See <a href="../availability_recovery/">Service Availability &amp; Recovery</a> for operational resilience.</li>
+<li>Enable and monitor CloudTrail, VPC flow logs, and GuardDuty.</li>
+<li>Define runbooks for cloud incident response (e.g., key compromise, data breach, DDoS).</li>
+<li>Regularly test backup and disaster recovery procedures, including multi-region failover.</li>
+<li>Automate alerting for anomalous cloud activity (IAM, network, storage).</li>
+<li>Ensure mTLS certificate/key compromise can be rapidly detected, contained, and rotated.</li>
+<li>Monitor and audit all access to secrets management/vault systems; alert on suspicious or unauthorized access.</li>
+<li>In the event of a secret or certificate compromise:</li>
+<li>Immediately revoke and rotate affected credentials in the vault.</li>
+<li>Audit all recent access and changes to vault/config management.</li>
+<li>Notify affected partners and internal teams.</li>
+<li>Review and update incident response and recovery procedures.</li>
 </ul>
+<hr/>
+<h2 id="summary">Summary</h2>
+<p>This threat model addresses the unique risks and mitigations for the cloud infrastructure supporting Sprinklr Live Chat, including mTLS authentication for partner-to-cloud communication, unified gateway architecture, ELB-based scalability, and multi-region deployment for availability and uptime. For application-level threats and secure architecture, see the corresponding documents.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
