@@ -1,0 +1,5 @@
+mkdocs
+htmlark[parsers]
+mkdocs-with-pdf
+mkdocs-mermaid2-plugin
+mkdocs-material
