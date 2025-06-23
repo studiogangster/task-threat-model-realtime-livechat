@@ -48,12 +48,12 @@ The following table maps each major component to the STRIDE threat categories, i
 | Component / Flow                | S | T | R | I | D | E | Key Mitigations |
 |---------------------------------|---|---|---|---|---|---|-----------------|
 | End User Devices                | ✔ | ✔ |   | ✔ | ✔ |   | Secure tokens, HTTPS, user education, session validation |
-| Client Web App                  | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | CSP, input validation, SDK integrity, RBAC, audit logs, SRI, CORS, domain whitelisting |
-| Client Admin Users              | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | MFA, RBAC, audit logs, secure login, session management |
+| Partner Web App                 | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | CSP, input validation, SDK integrity, RBAC, audit logs, SRI, CORS, domain whitelisting |
+| Partner Admin Users             | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | MFA, RBAC, audit logs, secure login, session management |
 | Sprinklr Live Chat Service      | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | TLS, session auth, tenant isolation, logging, quotas |
 | LLM Context Service             | ✔ | ✔ |   | ✔ | ✔ | ✔ | Upload validation, output monitoring, least privilege, S2S auth |
 | Sprinklr Dashboard & Integration| ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | Secure coding, strong auth, audit logs, input validation |
-| S2S LLM Callback to Client      | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | Mutual TLS, strict validation, rate limiting, signed callbacks |
+| S2S LLM Callback to Partner     | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | Mutual TLS, strict validation, rate limiting, signed callbacks |
 | SDK Delivery & Supply Chain     | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | Signed SDK, SRI, CORS, CSP, dependency audits, domain whitelisting |
 
 Legend:  
@@ -63,7 +63,7 @@ S = Spoofing, T = Tampering, R = Repudiation, I = Information Disclosure, D = De
 
 ## Detailed STRIDE Threat Mapping
 
-### Client Web App
+### Partner Web App
 
 | STRIDE Category         | Threats                                                                 | Mitigations                                                      |
 |------------------------|-------------------------------------------------------------------------|------------------------------------------------------------------|
@@ -115,16 +115,16 @@ S = Spoofing, T = Tampering, R = Repudiation, I = Information Disclosure, D = De
 
 ---
 
-### S2S LLM Callback to Client Backend
+### S2S LLM Callback to Partner Backend
 
 | STRIDE Category         | Threats                                                                 | Mitigations                                                      |
 |------------------------|-------------------------------------------------------------------------|------------------------------------------------------------------|
-| Spoofing               | Fake Sprinklr calls to client backend                                   | mTLS, signed requests, allowlists                                |
+| Spoofing               | Fake Sprinklr calls to partner backend                                  | mTLS, signed requests, allowlists                                |
 | Tampering              | Callback data alteration, replay attacks                                | Nonces, input validation, signed requests                        |
 | Repudiation            | Denial of callback actions                                              | Audit logs, signed requests, traceability                        |
 | Information Disclosure | Sensitive data leakage in callback                                      | Data minimization, access controls, encrypted transport          |
 | Denial of Service      | Callback flooding, resource exhaustion                                  | Rate limiting, quotas, monitoring                                |
-| Elevation of Privilege | Callback invoking unauthorized client actions                           | Function whitelisting, least privilege, config review            |
+| Elevation of Privilege | Callback invoking unauthorized partner actions                          | Function whitelisting, least privilege, config review            |
 
 ---
 

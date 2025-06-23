@@ -10,9 +10,9 @@ flowchart TD
     EU["End User"]
   end
 
-  subgraph ClientOrg["Client Organization (Outside Trust Boundary)"]
-    CWA["Client Web App"]
-    CB["Client Backend"]
+  subgraph PartnerOrg["Partner Organization (Outside Trust Boundary)"]
+    PWA["Partner Web App"]
+    PB["Partner Backend"]
   end
 
   subgraph SprinklrSaaS["Sprinklr SaaS (Trust Boundary)"]
@@ -23,12 +23,12 @@ flowchart TD
     LLMAPI["OpenAI / Anthropic / etc."]
   end
 
-  EU -- "1 - Login" --> CWA
-  CWA -- "2 - Authenticate" --> CB
-  CWA -- "3 - Request Sprinklr Token" --> SLC
-  SLC -- "4 - Issue Session Token" --> CWA
+  EU -- "1 - Login" --> PWA
+  PWA -- "2 - Authenticate" --> PB
+  PWA -- "3 - Request Sprinklr Token" --> SLC
+  SLC -- "4 - Issue Session Token" --> PWA
   EU -- "5 - Live Chat to Sprinklr with Token" --> SLC
-  SLC -- "6 - S2S or API Call" --> CB
+  SLC -- "6 - S2S or API Call" --> PB
   SLC -- "7 - LLM Query (API Call)" --> LLMAPI
 ```
 
@@ -45,8 +45,8 @@ The following diagram shows the main AWS infrastructure components used by Sprin
 ```mermaid
 flowchart TD
   subgraph Public["Public Internet"]
-    PUB["End User / Client Web App"]
-    CAU["Client Admin User"]
+    PUB["End User / Partner Web App"]
+    CAU["Partner Admin User"]
   end
 
   subgraph VPC["AWS VPC (Sprinklr SaaS Trust Boundary)"]
@@ -120,19 +120,19 @@ flowchart TD
   RDS["Database"]
   S3["S3 Storage & SDK"]
   CF["CloudFront CDN"]
-  CB["Client Backend"]
+  PB["Partner Backend"]
 
-  EU -- "Login/Chat" --> CWA
-  CWA -- "API Request" --> AGW
+  EU -- "Login/Chat" --> PWA
+  PWA -- "API Request" --> AGW
   AGW -- "Routes" --> ECS
   ECS -- "Session/Chat Data" --> RDS
   ECS -- "Knowledge/Files" --> S3
   ECS -- "LLM Query" --> LLM
   LLM -- "Context/Data" --> RDS
   LLM -- "Knowledge" --> S3
-  ECS -- "S2S/API Call" --> CB
-  CWA -- "SDK Request" --> CF
-  CF -- "Serves SDK" --> CWA
+  ECS -- "S2S/API Call" --> PB
+  PWA -- "SDK Request" --> CF
+  CF -- "Serves SDK" --> PWA
   CF -- "Fetches from" --> S3
 ```
 
