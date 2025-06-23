@@ -115,6 +115,16 @@ S = Spoofing, T = Tampering, R = Repudiation, I = Information Disclosure, D = De
   - Mitigation: S3 Block Public Access, encryption, VPC-only access, audit logs.
 - **Lateral Movement within VPC:**  
   - Mitigation: Micro-segmentation, security groups, NACLs, service-to-service auth. Enforce mTLS for all S2S/API communication between partner backends and Sprinklr Cloud backend.
+
+- **Certificate, Key, and Secret Management:**  
+  - Mitigation: 
+    - Use a centralized secrets management solution (e.g., AWS Secrets Manager, HashiCorp Vault) for all mTLS certificates, API keys, and sensitive configs.
+    - Enforce automated certificate/key rotation and expiration policies.
+    - Monitor vault access and changes with audit logging and alerting.
+    - Encrypt secrets at rest and in transit.
+    - Restrict vault access to least-privilege roles and require MFA for sensitive operations.
+    - Regularly review and test incident response for key/certificate compromise.
+
 - **Compromised CI/CD Pipeline:**  
   - Mitigation: Secrets management, pipeline isolation, code review, audit logging.
 - **Abuse of Cloud Management Plane:**  
@@ -133,6 +143,12 @@ S = Spoofing, T = Tampering, R = Repudiation, I = Information Disclosure, D = De
 - Regularly test backup and disaster recovery procedures, including multi-region failover.
 - Automate alerting for anomalous cloud activity (IAM, network, storage).
 - Ensure mTLS certificate/key compromise can be rapidly detected, contained, and rotated.
+- Monitor and audit all access to secrets management/vault systems; alert on suspicious or unauthorized access.
+- In the event of a secret or certificate compromise:
+  - Immediately revoke and rotate affected credentials in the vault.
+  - Audit all recent access and changes to vault/config management.
+  - Notify affected partners and internal teams.
+  - Review and update incident response and recovery procedures.
 
 ---
 

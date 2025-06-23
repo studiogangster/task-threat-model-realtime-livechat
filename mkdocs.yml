@@ -1,0 +1,55 @@
+site_name: Sprinklr Live Chat SDK
+site_url: https://sprinklr-threat-model.meddler.io/
+theme:
+  name: material
+
+plugins:
+    - search
+    - mermaid2
+    # - with-pdf
+
+nav:
+  - Home: index.md
+  - SDK Integration:
+      - Overview: 'integration/overview.md'
+      - SDK Usage: 'integration/sdk_usage.md'
+      - Web Integration: 'integration/web_integration.md'
+      - Mobile Integration (Out of scope): 'integration/mobile_integration.md'
+      - Troubleshooting & FAQ: 'integration/troubleshooting.md'
+  - System Design:
+      - Overview: '1. System Design/system_design.md'
+      - Scope: '1. System Design/scope.md'
+      - Actors: '1. System Design/actors.md'
+      - Data Flows: '1. System Design/data_flows.md'
+      - Deployment: '1. System Design/deployment.md'
+
+  - Security Design Q&A Session:
+      - Authentication for API and WebSocket: 'threat_modeling_interviews/authentication_api_websocket.md'
+      - Secure Communication Between Partner and Sprinklr: 'threat_modeling_interviews/secure_comm_partner_sprinklr.md'
+      - Historical Chat Data Storage: 'threat_modeling_interviews/historical_chat_data.md'
+      - Audit Logs for Session Compromise: 'threat_modeling_interviews/audit_logs_session_compromise.md'
+      - SDK Loading via Trusted Domains: 'threat_modeling_interviews/sdk_trusted_domains.md'
+      - SDK Integrity and Versioning: 'threat_modeling_interviews/sdk_integrity_versioning.md'
+      - WebSocket Message Integrity (HMAC) for Chat Messages: 'threat_modeling_interviews/websocket_message_integrity_hmac.md'
+      - Secure Storage of Sprinklr Session Tokens: 'threat_modeling_interviews/session_token_storage.md'
+      - Securing FAQ/Knowledge Graph Upload Functionality: 'threat_modeling_interviews/secure_faq_kg_upload.md'
+      - Secure Uploaded Data at Rest and Partner Data Isolation: 'threat_modeling_interviews/secure_uploaded_data_isolation.md'
+      - LLM Guardrails, Prompt Injection, Info Leakage, and Bias: 'threat_modeling_interviews/llm_guardrails_prompt_injection.md'
+      - Input Validation and Sanitization of End User Messages: 'threat_modeling_interviews/input_validation_sanitization.md'
+      - Isolating End User Context in LLM Responses: 'threat_modeling_interviews/llm_context_isolation.md'
+ 
+  - Threat Modeling:
+      - Overview: '2. Secure Architecture/overview.md'
+      - Data Flows: '2. Secure Architecture/data_flows.md'
+      - 🔐 Trust Boundaries: '2. Secure Architecture/trust_boundary.md'
+
+      - Cloud Architecture Review: '2. Secure Architecture/cloud_architecture.md'
+      - Architecture (Legacy): '2. Secure Architecture/architecture.md'
+      - Threat Model (Application): '../threat-model/threat_model.md'
+      - Threat Model (Cloud): '../threat-model/threat_model_cloud.md'
+      - Secure Architecture (Legacy): '../threat-model/secure_architecture.md'
+      # Uncomment or add below if incident response doc is created
+      # - Incident Response: '2. Secure Architecture/incident_response.md'
+
+ 
+  - Glossary: 'glossary.md'
