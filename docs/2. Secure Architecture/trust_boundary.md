@@ -30,7 +30,7 @@ Each entry includes:
 ```mermaid
 flowchart TD
   EU["End User (Untrusted / Internet)"]
-  SDK["Client Web/Mobile App (SDK)"]
+  SDK["Partner Web/Mobile App (SDK)"]
   SLC["Sprinklr Live Chat (SaaS)"]
 
   EU -- "Chat/Message" --> SDK
@@ -38,10 +38,10 @@ flowchart TD
 ```
 ---
 
-### 🔸 TB-02: Client Admin → Sprinklr Dashboard
+### 🔸 TB-02: Partner Admin → Sprinklr Dashboard
 - **id**: TB-02  
 - **description**: Admin users log into Sprinklr to configure workflows, analytics, and responses.  
-- **source zone**: Client Admin (Privileged User)  
+- **source zone**: Partner Admin (Privileged User)  
 - **target zone**: Sprinklr Admin UI (SaaS)  
 - **type**: External  
 - **security implications**:
@@ -53,7 +53,7 @@ flowchart TD
 **High-Level Data Flow Diagram:**
 ```mermaid
 flowchart TD
-  CAU["Client Admin User (Privileged)"]
+  CAU["Partner Admin User (Privileged)"]
   SD["Sprinklr Dashboard (Admin UI, SaaS)"]
 
   CAU -- "Secure Login / Configuration / Management" --> SD
@@ -61,11 +61,11 @@ flowchart TD
 
 ---
 
-### 🔸 TB-03: Sprinklr LLM → Client API / MCP Server
+### 🔸 TB-03: Sprinklr LLM → Partner API / MCP Server
 - **id**: TB-03  
-- **description**: LLM makes runtime callbacks to client’s backend for memory/context enrichment.  
+- **description**: LLM makes runtime callbacks to Partner’s backend for memory/context enrichment.  
 - **source zone**: Sprinklr LLM Engine  
-- **target zone**: Client MCP API  
+- **target zone**: Partner MCP API  
 - **type**: Partner  
 - **security implications**:
     - Request spoofing or replay  
@@ -78,8 +78,8 @@ flowchart TD
   subgraph Sprinklr_SaaS ["Sprinklr SaaS (Trust Boundary)"]
     LLM["Sprinklr LLM Context Service"]
   end
-  subgraph Client_Org ["Client Organization (Outside Trust Boundary)"]
-    CB["Client Backend API / MCP Server"]
+  subgraph Partner_Org ["Partner Organization (Outside Trust Boundary)"]
+    CB["Partner Backend API / MCP Server"]
   end
 
   LLM -. "S2S Callback (MTLS/Signed)" .-> CB

@@ -23,6 +23,18 @@ nav:
       - Data Flows: '1. System Design/data_flows.md'
       - Deployment: '1. System Design/deployment.md'
 
+
+  - Threat Modeling:
+      - Overview: '2. Secure Architecture/overview.md'
+      - Trust Boundaries: '2. Secure Architecture/trust_boundary.md'
+      - Data Flows: '2. Secure Architecture/data_flows.md'
+      - Cloud Architecture Review: '2. Secure Architecture/cloud_architecture.md'
+      - Architecture (Legacy): '2. Secure Architecture/architecture.md'
+      - Threat Model (Application): '../threat-model/threat_model.md'
+      - Threat Model (Cloud): '../threat-model/threat_model_cloud.md'
+      - Secure Architecture (Legacy): '../threat-model/secure_architecture.md'
+      # Uncomment or add below if incident response doc is created
+      # - Incident Response: '2. Secure Architecture/incident_response.md'
   - Security Design Q&A Session:
       - Authentication for API and WebSocket: 'threat_modeling_interviews/authentication_api_websocket.md'
       - Secure Communication Between Partner and Sprinklr: 'threat_modeling_interviews/secure_comm_partner_sprinklr.md'
@@ -38,18 +50,5 @@ nav:
       - Input Validation and Sanitization of End User Messages: 'threat_modeling_interviews/input_validation_sanitization.md'
       - Isolating End User Context in LLM Responses: 'threat_modeling_interviews/llm_context_isolation.md'
  
-  - Threat Modeling:
-      - Overview: '2. Secure Architecture/overview.md'
-      - Data Flows: '2. Secure Architecture/data_flows.md'
-      - 🔐 Trust Boundaries: '2. Secure Architecture/trust_boundary.md'
-
-      - Cloud Architecture Review: '2. Secure Architecture/cloud_architecture.md'
-      - Architecture (Legacy): '2. Secure Architecture/architecture.md'
-      - Threat Model (Application): '../threat-model/threat_model.md'
-      - Threat Model (Cloud): '../threat-model/threat_model_cloud.md'
-      - Secure Architecture (Legacy): '../threat-model/secure_architecture.md'
-      # Uncomment or add below if incident response doc is created
-      # - Incident Response: '2. Secure Architecture/incident_response.md'
-
  
   - Glossary: 'glossary.md'

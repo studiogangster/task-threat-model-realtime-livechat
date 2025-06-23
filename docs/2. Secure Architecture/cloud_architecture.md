@@ -135,7 +135,7 @@ flowchart TD
 ## Security Controls
 
 - **Network Segmentation:**  
-  All critical services are deployed within a private VPC. Only ALB and CloudFront are exposed to the public internet.
+  All critical services are deployed within a private VPC. Only ALB/ELB and CloudFront are exposed to the public internet.
 
 - **mTLS Everywhere:**  
   Mutual TLS is enforced for all partner-to-cloud and internal service-to-service communication.
