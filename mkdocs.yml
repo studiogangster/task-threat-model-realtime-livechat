@@ -70,6 +70,6 @@ nav:
       - Isolating End User Context in LLM Responses: 'threat_modeling_interviews/llm_context_isolation.md'
  
  
-  - Summary: 'threat_modeling_report.md'
+  - Report Snapshot: 'threat_modeling_report.md'
   - Glossary: 'glossary.md'
 
