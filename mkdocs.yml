@@ -3,9 +3,8 @@ site_url: https://sprinklr-threat-model.meddler.io/
 theme:
   name: material
   custom_dir: docs/overrides
-  features:
+features:
     - navigation.expand
-    
 plugins:
     - search
     - mermaid2
