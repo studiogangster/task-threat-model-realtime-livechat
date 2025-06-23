@@ -53,3 +53,39 @@ A logically isolated section of the cloud where resources are launched in a virt
 
 **WebSocket**  
 A protocol providing full-duplex communication channels over a single TCP connection, used for real-time chat.
+
+**Partner Web App (PWA)**  
+A web application owned and operated by the partner organization, through which end users interact with Sprinklr services.
+
+**Partner Backend (PB)**  
+A backend service managed by the partner organization, responsible for authenticating users and securely obtaining Sprinklr tokens from the Sprinklr API Gateway.
+
+**Sprinklr API Gateway (AGW)**  
+The entry point for all API requests to Sprinklr services, responsible for authentication, authorization, routing, and security enforcement.
+
+**App Services**  
+Application logic and microservices within Sprinklr responsible for handling chat sessions, LLM queries, and business logic.
+
+**End-User Token (Sprinklr Token)**  
+A secure token issued by Sprinklr, representing an authenticated end user and used to authorize API requests.
+
+**S2S/API Call (Server-to-Server/API Call)**  
+A direct API request between backend services, typically for integration or data exchange, authenticated and secured.
+
+**SDK (Software Development Kit)**  
+A set of tools, libraries, and documentation provided by Sprinklr to enable integration with partner applications.
+
+**Session Token**  
+A cryptographically signed token representing an authenticated session, used to maintain user state and authorize actions.
+
+**JWT (JSON Web Token)**  
+A compact, URL-safe token format used for securely transmitting information between parties as a JSON object, often used for authentication.
+
+**OAuth2**  
+An open standard for access delegation, commonly used for token-based authentication and authorization.
+
+**SSO (Single Sign-On)**  
+An authentication process that allows a user to access multiple applications with one set of login credentials.
+
+**IAM Role**  
+A set of permissions assigned to an identity or service, used to control access to resources in cloud environments.
